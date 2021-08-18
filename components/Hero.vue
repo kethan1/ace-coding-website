@@ -62,15 +62,17 @@
 export default {
   data() {
     return {
-      windowWidth: window.innerWidth,
-      windowHeight: window.innerHeight,
+      windowWidth: process.browser ? window.innerWidth : 0,
+      windowHeight: process.browser ? window.innerHeight : 0,
       showDinoLogo: false,
     };
   },
   mounted() {
     window.addEventListener("resize", () => {
-      this.windowWidth = window.innerWidth;
-      this.windowHeight = window.innerHeight;
+      if (process.browser) {
+        this.windowWidth = window.innerWidth;
+        this.windowHeight = window.innerHeight;
+      }
     });
     setTimeout(() => {
       this.showDinoLogo = true;

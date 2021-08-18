@@ -94,7 +94,13 @@ export default {
   },
   computed: {
     osInfo() {
-      if (navigator.userAgent.indexOf("Win") !== -1) {
+      let userNavigator;
+      if (process.browser) {
+        userNavigator = navigator;
+      } else {
+        return {};
+      }
+      if (userNavigator.userAgent.indexOf("Win") !== -1) {
         return {
           os: "windows",
           terminalTitle: "Command Prompt",
@@ -112,8 +118,8 @@ export default {
           headerHeight: "max(4vmin, 30px)",
         };
       }
-      if (navigator.userAgent.indexOf("Mac") !== -1
-        || navigator.userAgent.indexOf("like Mac") !== -1) {
+      if (userNavigator.userAgent.indexOf("Mac") !== -1
+        || userNavigator.userAgent.indexOf("like Mac") !== -1) {
         return {
           os: "mac",
           terminalTitle: "rexy —— -bash",
