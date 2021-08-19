@@ -65,6 +65,7 @@ export default {
   },
   methods: {
     toggleMobileMenu() {
+      document.querySelector(".menu-btn").classList.toggle("close-menu-btn");
       document.querySelector(".mobile-menu").classList.toggle("mobile-menu-show");
     },
   },
@@ -72,17 +73,6 @@ export default {
 </script>
 
 <style>
-@media only screen and (min-width: 478px) {
-  .nav-links a {
-    display: none !important;
-  }
-  .menu-btn {
-    display: inline-flex !important;
-  }
-  .mobile-menu {
-    display: flex !important;
-  }
-}
 @media only screen and (min-width: 1024px) {
   .nav-links a {
     display: inline-flex !important;
@@ -94,10 +84,21 @@ export default {
     display: none !important;
   }
 }
+@media only screen and (max-width: 1023px) {
+  .nav-links a {
+    display: none !important;
+  }
+  .menu-btn {
+    display: inline-flex !important;
+  }
+  .mobile-menu {
+    display: flex !important;
+  }
+}
 
 .nav-bar {
   --nav-bar-height: 60px;
-  --nav-bar-font-size: 22px;
+  --nav-bar-font-size: 20px;
   z-index: 1000000;
   position: fixed;
   width: 100vw;
@@ -107,8 +108,8 @@ export default {
 }
 .nav-content {
   z-index: 1000001;
-  width: 90vw;
-  padding: 0 5vw;
+  width: 95vw;
+  padding: 0 2.5vw;
   background-color: #90E4A3;
   box-shadow: 0px 0px 6px #000000AA;
   height: var(--nav-bar-height);
@@ -121,7 +122,7 @@ export default {
   align-items: center;
 }
 .logo {
-  height: 75%;
+  height: 70%;
 }
 .nav-links a,
 .mobile-menu a {
@@ -169,6 +170,7 @@ export default {
   max-height: 100vh;
 }
 .menu-btn {
+  padding: 0 10px;
   display: inline-flex;
   width: calc(var(--nav-bar-height) * 0.3);
   height: calc(var(--nav-bar-height) * 0.3);
@@ -187,7 +189,7 @@ export default {
   background: black;
   height: 20%;
   border-radius: 40px;
-  transition: width 0.3s;
+  transition: width 0.3s, transform 0.3s, opacity 0.3s;
 }
 .bar-1 {
   width: 100%;
@@ -197,5 +199,16 @@ export default {
 }
 .bar-3 {
   width: 40%;
+}
+.close-menu-btn .bar-1 {
+  width: 100%;
+  transform: translateY(200%) rotate(45deg);
+}
+.close-menu-btn .bar-2 {
+  opacity: 0;
+}
+.close-menu-btn .bar-3 {
+  width: 100%;
+  transform: translateY(-200%) rotate(-45deg);
 }
 </style>

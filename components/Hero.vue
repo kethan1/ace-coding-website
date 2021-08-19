@@ -123,19 +123,19 @@ export default {
   .register-btn {
     --register-btn-width: 200px;
     --register-btn-height: 50px;
-    --register-btn-font-size: 25px;
+    --register-btn-font-size: 20px;
     --register-btn-margin-top: 2vmin;
   }
+  .main-animation {
+    z-index: 1000;
+  }
+}
 @media only screen and (min-width: 1600px) {
   .register-btn {
     --register-btn-width: 250px;
     --register-btn-height: 70px;
-    --register-btn-font-size: 30px;
+    --register-btn-font-size: 25px;
     --register-btn-margin-top: 2vmin;
-  }
-}
-  .main-animation {
-    z-index: 1000;
   }
 }
 @media only screen and (max-width: 1024px) {
