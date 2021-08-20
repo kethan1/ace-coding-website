@@ -154,7 +154,7 @@ export default {
 .mobile-menu a:hover {
   box-shadow: 0px 0px 4px #44694daa;
   background-color: #00000008;
-  color: #201ba8;
+  color: #0f6886;
 }
 .mobile-menu {
   width: 100%;
@@ -162,9 +162,9 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: #7ab88a;
+  background: #7ab88aDD;
   overflow: hidden;
-  transition: max-height 0.5s;
+  transition: max-height 0.3s;
 }
 .mobile-menu-show {
   max-height: 100vh;
@@ -189,7 +189,7 @@ export default {
   background: black;
   height: 20%;
   border-radius: 40px;
-  transition: width 0.3s, transform 0.3s, opacity 0.3s;
+  transition: width 0.2s, transform 0.2s, opacity 0.2s;
 }
 .bar-1 {
   width: 100%;

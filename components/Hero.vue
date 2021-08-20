@@ -4,9 +4,8 @@
     <div
       class="hero-section"
       :style="{
-        '--animation-height': `${this.animationHeight}px`,
-        '--animation-width': `${this.animationWidth}px`,
-        '--offset-to-top': this.offsetToTop,
+        '--animation-height': 'calc(var(--animation-width) * (9/16))',
+        '--offset-to-top': 'calc(-1 * (100vh - var(--animation-height)))',
       }"
     >
       <div class="nav-placeholder" />
@@ -101,7 +100,7 @@ export default {
 .hero-section {
   width: 100vw;
   height: calc(100vh - 60px);
-  background: #1D1654;
+  background:#162e54;
   overflow: hidden;
   position: relative;
 }
@@ -114,6 +113,7 @@ export default {
     --terminal-width: 60vw;
     --terminal-height: 58vh;
     --terminal-margin-tl: 3vw;
+    --animation-width: 50vw;
   }
   /* .register-btn {
     --register-btn-width: 200px;
@@ -121,11 +121,11 @@ export default {
     --register-btn-font-size: 20px;
     --register-btn-margin-top: 2vmin;
   } */
-  .main-animation {
-    z-index: 1000;
-  }
 }
 @media only screen and (min-width: 1600px) {
+  .hero-section {
+    --terminal-width: 50vw;
+  }
   /* .register-btn {
     --register-btn-width: 250px;
     --register-btn-height: 70px;
@@ -138,6 +138,7 @@ export default {
     --terminal-width: 60vw;
     --terminal-height: 45vh;
     --terminal-margin-tl: 5vw;
+    --animation-width: 60vw;
   }
   /* .register-btn {
     --register-btn-width: 150px;
@@ -146,11 +147,18 @@ export default {
     --register-btn-margin-top: 2vmin;
   } */
 }
+@media only screen and (min-width: 768px) {
+  .main-animation {
+    z-index: 1000;
+  }
+}
 @media only screen and (max-width: 767px) {
   .hero-section {
     --terminal-width: 90vw;
-    --terminal-height: 40vh;
+    --terminal-height: 45vh;
     --terminal-margin-tl: 5vw;
+    --animation-width: 100vw;
+
   }
   /* .register-btn {
     --register-btn-width: 150px;
@@ -165,7 +173,7 @@ export default {
 @media only screen and (max-width: 478px) {
   .hero-section {
     --terminal-width: 90vw;
-    --terminal-height: 40vh;
+    --terminal-height: 45vh;
     --terminal-margin-tl: 5vw;
   }
   /* .register-btn {

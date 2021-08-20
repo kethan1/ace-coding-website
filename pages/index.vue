@@ -25,24 +25,24 @@ body {
 }
 /* For Firefox */
 html {
-  scrollbar-color: #221DC4 #100D2E;
+  scrollbar-color: #224885 #0c182c;
   scrollbar-width: thin;
   scroll-behavior: smooth;
 }
 body:hover {
   background-position: 100% 0;
-  scrollbar-color: #1D1693 #15103E;
+  scrollbar-color: #1d3e74 #0f203a;
 }
 
 body::-webkit-scrollbar {
   background: linear-gradient(
     90deg,
-    #0C0922 0%,
-    #100D2E 25%,
-    #0C0922 50%,
-    #120D33 50%,
-    #15103E 75%,
-    #120D33 100%
+    #0f1e38 0%,
+    #0c182c 25%,
+    #0f1e38 50%,
+    #0f203b 50%,
+    #0f203a 75%,
+    #0f203b 100%
   );
   background-size: 200% 100%;
   background-position-x: inherit;
@@ -51,9 +51,9 @@ body::-webkit-scrollbar {
 body::-webkit-scrollbar-thumb {
   background: linear-gradient(
     90deg,
-    #221DC4 0%,
-    #221DC4 50%,
-    #1D1693 50%
+    #224885 0%,
+    #224885 50%,
+    #1d3e74 50%
   );
   background-size: 200% 100%;
   background-position-x: inherit;
