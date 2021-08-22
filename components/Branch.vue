@@ -11,17 +11,20 @@
       >{{ branchName }}</h1>
     </div>
     <div class="branch-info">
-      <div
-        v-for="(fieldVal, fieldTitle, index) in fields"
-        :key="index"
-        class="field-pair"
-      >
-        <h3
-          class="field-title"
-        >{{ fieldTitle }}</h3>
-        <p
-          class="field-val"
-        >{{ fieldVal }}</p>
+      <p class="description">{{ description }}</p>
+      <div>
+        <div
+          v-for="(fieldVal, fieldTitle, index) in fields"
+          :key="index"
+          class="field-pair"
+        >
+          <h3
+            class="field-title"
+          >{{ fieldTitle }}</h3>
+          <p
+            class="field-val"
+          >{{ fieldVal }}</p>
+        </div>
       </div>
     </div>
   </div>
@@ -42,28 +45,30 @@ export default {
       type: Object,
       required: true,
     },
+    description: {
+      type: String,
+      required: true,
+    },
   },
 };
 </script>
 
 <style>
 .branch-overview {
+  background: #def5fb;
   overflow: hidden;
   font-family: Poppins;
   display: flex;
-  width: 33%;
-  flex-direction: column;
-  align-items: center;
   color: #1b2f36;
   border-radius: 10px;
   box-shadow: 0px 0px 0px #498599;
-  transition: box-shadow 0.25s;
+  transition: box-shadow 0.25s, transform 0.25s;
 }
 .branch-overview:hover {
+  transform: scale(101%);
   box-shadow: 3px 3px 0px #498599;
 }
 .branch-header {
-  width: 100%;
   background: linear-gradient(
     #7fcce6 50%,
     #6cbdd8
@@ -74,6 +79,7 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
 }
 .branch-overview:hover .branch-header {
   background-position: 0 100%;
@@ -86,11 +92,10 @@ export default {
 }
 .branch-info {
   background: #def5fb;
-  width: 100%;
-  padding: 10px 0;
+  padding: 20px 20px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: space-between;
 }
 .branch-info > * {
   width: 90%
@@ -101,5 +106,41 @@ export default {
 }
 .field-pair {
   margin: 5px;
+}
+.description {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+@media only screen and (min-width: 1024px) {
+  .branch-header {
+    width: 30%;
+  }
+  .branch-info {
+    width: 70%;
+  }
+}
+@media only screen and (max-width: 1023px) {
+  .branch-overview {
+    flex-direction: column;
+  }
+  .branch-header {
+    flex-direction: row;
+    height: 20%;
+  }
+  .branch-logo {
+    width: 30%;
+    padding-bottom: 5%;
+  }
+  .branch-info {
+    height: 80%;
+  }
+}
+@media only screen and (max-width: 478px) {
+  .branch-header {
+    justify-content: center;
+  }
+  .branch-logo {
+    display: none;
+  }
 }
 </style>

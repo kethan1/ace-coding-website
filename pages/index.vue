@@ -25,6 +25,7 @@ body {
 }
 /* For Firefox */
 html {
+  background: #162e54;
   scrollbar-color: #224885 #0c182c;
   scrollbar-width: thin;
   scroll-behavior: smooth;

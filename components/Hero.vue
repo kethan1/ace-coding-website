@@ -56,38 +56,13 @@
 export default {
   data() {
     return {
-      windowWidth: process.browser ? window.innerWidth : 0,
-      windowHeight: process.browser ? window.innerHeight : 0,
       showDinoLogo: false,
     };
   },
   mounted() {
-    window.addEventListener("resize", () => {
-      if (process.browser) {
-        this.windowWidth = window.innerWidth;
-        this.windowHeight = window.innerHeight;
-      }
-    });
     setTimeout(() => {
       this.showDinoLogo = true;
     }, 2000);
-  },
-  computed: {
-    animationWidth() {
-      if (this.windowWidth <= 767) {
-        return this.windowWidth;
-      }
-      if (this.windowWidth <= 1024) {
-        return this.windowWidth * 0.6;
-      }
-      return this.windowWidth * 0.5;
-    },
-    animationHeight() {
-      return this.animationWidth * (9 / 16);
-    },
-    offsetToTop() {
-      return `${-((this.windowHeight - this.animationHeight) / this.animationHeight) * 100}%`;
-    },
   },
 };
 </script>
@@ -100,7 +75,7 @@ export default {
 .hero-section {
   width: 100vw;
   height: calc(100vh - 60px);
-  background:#162e54;
+  background:var(--dark-bg);
   overflow: hidden;
   position: relative;
 }

@@ -110,7 +110,7 @@ export default {
   z-index: 1000001;
   width: 95vw;
   padding: 0 2.5vw;
-  background-color: #90E4A3;
+  background-color: #90E4A3CC;
   box-shadow: 0px 0px 6px #000000AA;
   height: var(--nav-bar-height);
   display: flex;
