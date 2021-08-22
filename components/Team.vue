@@ -5,7 +5,7 @@
         -->The Team<!--
       --></h1>
       <p class="subheading"><!--
-        -->All of the amazing students that keep ACE Coding running.<!--
+        -->All of the amazing students that keep our Club running.<!--
       --></p>
     </div>
     <div class="team">
@@ -51,7 +51,7 @@ export default {
   data() {
     return {
       categories: {
-        "Club Leadership": [
+        Leadership: [
           {
             name: "Edward Ding",
             title: "Co-President",
@@ -122,9 +122,17 @@ export default {
 .team-category {
   margin: 10px 0;
   padding: 20px 10px;
-  background: #FFFFFF22;
+  background: linear-gradient(
+    #21437a88,
+    #00AAAA33
+  );
   border-radius: 10px;
   text-align: center;
+  box-shadow: 0px 0px 0px var(--secondary-bg);
+  transition: box-shadow 0.25s;
+}
+.team-category:hover {
+  box-shadow: 3px 3px 0px var(--secondary-bg);
 }
 .team-category:first-child {
   margin-top: 0;
@@ -145,6 +153,10 @@ export default {
   margin: 8px;
   background: #FFFFFF22;
   width: 180px;
+  transition: transform 0.25s;
+}
+.team-member:hover {
+  transform: scale(103%);
 }
 .member-image {
   width: 100%;

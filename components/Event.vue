@@ -99,7 +99,12 @@ export default {
 
 <style>
 .event-overview {
-  background: var(--primary-bg);
+  background: linear-gradient(
+    #21437a88,
+    #00AAAA55
+  );
+  background-size: 100% 200%;
+  transition: background-size 0.2s;
   overflow: hidden;
   font-family: Poppins;
   display: flex;

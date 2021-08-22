@@ -40,11 +40,22 @@ export default {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
   border-radius: 5px;
-  background: var(--primary-bg);
+  padding: 20px;
   width: var(--inner-content-width);
   margin: 10px 0;
+
+  background: linear-gradient(
+    #00AAAA22,
+    #00AAAA55
+  );
+  background-size: 100% 200%;
+  box-shadow: 0px 0px 0px var(--secondary-bg);
+  transition: background-size 0.2s, box-shadow 0.25s;
+}
+.text-image:hover {
+  background-size: 100% 100%;
+  box-shadow: 3px 3px 0px var(--secondary-bg);
 }
 .text-image:first-child {
   margin-top: 0;
@@ -57,7 +68,7 @@ export default {
 }
 .about-text {
   text-align: center;
-  font-size: 17px;
+  font-size: 18px;
 }
 .about-image {
   width: min(45%, 600px);

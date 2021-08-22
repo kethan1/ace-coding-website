@@ -19,6 +19,7 @@
         var(--lighter-bg)
     );
     --primary-bg: #21437a88;
+    --secondary-bg: #00000088;
     color: #FFFFFF;
 }
 .light-section {

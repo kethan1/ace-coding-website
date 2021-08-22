@@ -73,19 +73,18 @@ export default {
 }
 .branch-header {
   background: linear-gradient(
-    #00AAAA22 50%,
+    #00AAAA22,
     #00AAAA55
   );
   background-size: 100% 200%;
-  background-position: 0 0;
-  transition: background-position 0.2s;
+  transition: background-size 0.2s;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
 }
 .branch-overview:hover .branch-header {
-  background-position: 0 100%;
+  background-size: 100% 100%;
 }
 .branch-logo {
   width: 90%;
@@ -94,7 +93,10 @@ export default {
   width: 90%;
 }
 .branch-info {
-  background: var(--primary-bg);
+  background: linear-gradient(
+    var(--primary-bg),
+    #00AAAA22
+  );
   padding: 20px;
   display: flex;
   flex-direction: column;
