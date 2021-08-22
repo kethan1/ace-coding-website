@@ -99,7 +99,7 @@ export default {
 
 <style>
 .event-overview {
-  background: #21437a;
+  background: var(--primary-bg);
   overflow: hidden;
   font-family: Poppins;
   display: flex;

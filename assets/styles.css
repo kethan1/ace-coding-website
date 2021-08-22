@@ -1,6 +1,7 @@
 :root {
   --dark-bg: #162e54;
-  --light-bg: #2e5086;
+  --lighter-bg: #163d54;
+  --lightest-bg: #2e5086;
   --light-green: #acdfb8;
 }
 .section {
@@ -11,14 +12,36 @@
   align-items: center;
 }
 .dark-section {
-    background: var(--dark-bg);
+    background: linear-gradient(
+        90deg,
+        var(--dark-bg),
+        var(--lighter-bg)
+    );
+    --primary-bg: #21437a88;
     color: #FFFFFF;
 }
 .light-section {
     background: #FFFFFF;
+    --primary-bg: #def5fb;
+    --secondary-bg: #498599;
+    color: #001941
 }
-.header {
-  font-size: 36px;
+
+.heading {
+  margin: 8px;
+}
+.light-section .heading {
+    background: linear-gradient(
+      90deg,
+        var(--dark-bg),
+        var(--lightest-bg)
+    );
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+.dark-section .heading {
+  color: white;
 }
 .subheading {
   margin: 0;

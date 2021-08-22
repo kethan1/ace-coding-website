@@ -59,22 +59,22 @@ export default {
 
 <style>
 .branch-overview {
-  background: #def5fb;
+  background: var(--primary-bg);
   overflow: hidden;
   font-family: Poppins;
   display: flex;
   color: #1b2f36;
   border-radius: 10px;
-  box-shadow: 0px 0px 0px #498599;
+  box-shadow: 0px 0px 0px var(--secondary-bg);
   transition: box-shadow 0.25s;
 }
 .branch-overview:hover {
-  box-shadow: 3px 3px 0px #498599;
+  box-shadow: 3px 3px 0px var(--secondary-bg);
 }
 .branch-header {
   background: linear-gradient(
-    #7fcce6 50%,
-    #6cbdd8
+    #00AAAA22 50%,
+    #00AAAA55
   );
   background-size: 100% 200%;
   background-position: 0 0;
@@ -94,7 +94,7 @@ export default {
   width: 90%;
 }
 .branch-info {
-  background: #def5fb;
+  background: var(--primary-bg);
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -117,7 +117,7 @@ export default {
 .register-btn {
   width: 100%;
   margin-top: 20px;
-  background: #498599;
+  background: var(--secondary-bg);
   padding: 10px;
   display: flex;
   justify-content: center;

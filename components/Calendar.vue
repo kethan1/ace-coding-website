@@ -1,7 +1,7 @@
 <template>
   <div class="section dark-section">
     <div class="text">
-      <h1 class="header"><!--
+      <h1 class="heading"><!--
         -->Calendar<!--
       --></h1>
       <p class="subheading"><!--
@@ -22,9 +22,9 @@
       <Event
         class="event"
         month="Sept"
-        :day="22"
+        :day="29"
         time-range="3:15-4:15"
-        calendar-dates="20210922T221500Z%2F20210922T231500Z"
+        calendar-dates="20210929T221500Z%2F20210929T231500Z"
         event-title="HPMS - First Lesson of the Year!"
         event-location="Harvest Park Middle School"
         :event-description="
@@ -35,9 +35,9 @@
       <Event
         class="event"
         month="Sept"
-        :day="23"
+        :day="30"
         time-range="3:15-4:15"
-        calendar-dates="20210923T221500Z%2F20210923T231500Z"
+        calendar-dates="20210930T221500Z%2F20210930T231500Z"
         event-title="PMS - First Lesson of the Year!"
         event-location="Pleasanton Middle School"
         :event-description="
@@ -48,9 +48,9 @@
       <Event
         class="event"
         month="Sept"
-        :day="23"
+        :day="30"
         time-range="3:15-4:15"
-        calendar-dates="20210923T221500Z%2F20210923T231500Z"
+        calendar-dates="20210930T221500Z%2F20210930T231500Z"
         event-title="HMS - First Lesson of the Year!"
         event-location="Hart Middle School"
         :event-description="
@@ -63,19 +63,8 @@
 </template>
 
 <script>
-import hpmsLogo from "../assets/hpms-logo.png";
-import pmsLogo from "../assets/pms-logo.png";
-import hmsLogo from "../assets/hms-logo.png";
 
 export default {
-  data() {
-    return {
-      hpmsLogo,
-      pmsLogo,
-      hmsLogo,
-    };
-  },
-
 };
 </script>
 
@@ -87,7 +76,7 @@ export default {
   width: min(80vw, 1200px);
 }
 .event {
-  margin: 10px;
+  margin: 10px 0;
 }
 .event:first-child {
   margin-top: 0;

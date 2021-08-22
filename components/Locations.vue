@@ -1,7 +1,7 @@
 <template>
   <div class="section light-section">
     <div class="text">
-      <h1 class="header"><!--
+      <h1 class="heading"><!--
         -->Locations<!--
       --></h1>
       <p class="subheading"><!--
@@ -71,7 +71,6 @@ export default {
   font-family: Poppins, sans-serif;
   margin-bottom: 2.5vw;
 }
-.header,
 .description {
   margin: 0;
 }
