@@ -50,7 +50,11 @@ export default {
         },
         {
           pageName: "About",
-          pageLink: "#",
+          pageLink: "#about",
+        },
+        {
+          pageName: "Calendar",
+          pageLink: "#calendar",
         },
         {
           pageName: "Team",

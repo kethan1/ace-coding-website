@@ -2,7 +2,9 @@
   <div>
     <NavBar />
     <Hero id="home" />
-    <Locations />
+    <About id="about" />
+    <Calendar id="calendar" />
+    <Locations id="locations" />
   </div>
 </template>
 

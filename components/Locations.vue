@@ -5,7 +5,7 @@
         -->Locations<!--
       --></h1>
       <p class="subheading"><!--
-        -->We offer programming lessons for all students across Pleasanton.<!--
+        -->We offer programming lessons for students all across Pleasanton.<!--
       --></p>
     </div>
     <div class="branches">
@@ -17,8 +17,7 @@
           + 'consectetur adipisicing elit. Numquam non ad eius ipsa neque repellat?'"
         :fields="{
           'Meeting Times': '3:15 to 4:15 PM on Wednesdays',
-          'Location': 'D-32',
-          'Address': '4900 Valley Ave, Pleasanton, CA 94566',
+          'Meeting Location': 'D-32',
         }"
       />
       <Branch
@@ -29,8 +28,7 @@
           + 'consectetur adipisicing elit. Numquam non ad eius ipsa neque repellat?'"
         :fields="{
           'Meeting Times': '3:15 to 4:15 PM on Thursdays',
-          'Location': 'Zoom',
-          'Address': '5001 Case Ave, Pleasanton, CA 94566',
+          'Meeting Location': 'B-4',
         }"
       />
       <Branch
@@ -41,8 +39,7 @@
           + 'consectetur adipisicing elit. Numquam non ad eius ipsa neque repellat?'"
         :fields="{
           'Meeting Times': '3:15 to 4:15 PM on Thursdays',
-          'Location': 'Zoom',
-          'Address': '4433 Willow Rd, Pleasanton, CA 94588',
+          'Meeting Location': 'A-6',
         }"
       />
     </div>
@@ -82,9 +79,15 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  max-width: min(80vw, 1200px);
+  width: min(80vw, 1200px);
 }
 .branch {
   margin: 10px;
+}
+.branch:first-child {
+  margin-top: 0;
+}
+.branch:last-child {
+  margin-bottom: 0;
 }
 </style>

@@ -115,7 +115,7 @@ export default {
             close: windowsCloseIcon,
           },
           windowIcon: windowsTerminalIcon,
-          headerHeight: "max(4vmin, 30px)",
+          headerHeight: "max(4vmin, 25px)",
         };
       }
       if (userNavigator.userAgent.indexOf("Mac") !== -1
@@ -134,7 +134,7 @@ export default {
             maximize: macMaximizeIcon,
           },
           windowIcon: macTerminalIcon,
-          headerHeight: "max(4vmin, 30px)",
+          headerHeight: "max(4vmin, 25px)",
         };
       }
       return {
@@ -159,7 +159,7 @@ export default {
           maximize: linuxMaximizeIcon,
           close: linuxCloseIcon,
         },
-        headerHeight: "max(4.5vmin, 36px)",
+        headerHeight: "max(4.5vmin, 25px)",
       };
     },
   },

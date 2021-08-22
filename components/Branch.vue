@@ -25,6 +25,10 @@
             class="field-val"
           >{{ fieldVal }}</p>
         </div>
+        <a
+          href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+          class="register-btn"
+        >Register Here</a>
       </div>
     </div>
   </div>
@@ -62,10 +66,9 @@ export default {
   color: #1b2f36;
   border-radius: 10px;
   box-shadow: 0px 0px 0px #498599;
-  transition: box-shadow 0.25s, transform 0.25s;
+  transition: box-shadow 0.25s;
 }
 .branch-overview:hover {
-  transform: scale(101%);
   box-shadow: 3px 3px 0px #498599;
 }
 .branch-header {
@@ -92,13 +95,13 @@ export default {
 }
 .branch-info {
   background: #def5fb;
-  padding: 20px 20px;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 .branch-info > * {
-  width: 90%
+  width: calc(100% - 20px);
 }
 .field-title,
 .field-val {
@@ -108,8 +111,25 @@ export default {
   margin: 5px;
 }
 .description {
-  font-size: 22px;
-  margin-bottom: 10px;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+.register-btn {
+  width: 100%;
+  margin-top: 20px;
+  background: #498599;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  transition: transform 0.25s;
+}
+.register-btn:hover {
+  transform: scale(101%);
 }
 @media only screen and (min-width: 1024px) {
   .branch-header {

@@ -14,6 +14,14 @@
           class="terminal"
           :run-view-cmd="showDinoLogo"
         />
+        <button class="register-btn">
+          <a
+            href="#locations"
+            style="text-decoration: none; color: white;"
+          >
+            Register Now!
+          </a>
+        </button>
       </div>
       <div class="main-animation">
         <img
@@ -85,28 +93,28 @@ export default {
 
 @media only screen and (min-width: 1025px) {
   .hero-section {
-    --terminal-width: 60vw;
+    --terminal-width: 55vw;
     --terminal-height: 58vh;
     --terminal-margin-tl: 3vw;
     --animation-width: 50vw;
   }
-  /* .register-btn {
+  .register-btn {
     --register-btn-width: 200px;
     --register-btn-height: 50px;
-    --register-btn-font-size: 20px;
+    --register-btn-font-size: 22px;
     --register-btn-margin-top: 2vmin;
-  } */
+  }
 }
-@media only screen and (min-width: 1600px) {
+@media only screen and (min-width: 1500px) {
   .hero-section {
     --terminal-width: 50vw;
   }
-  /* .register-btn {
+  .register-btn {
     --register-btn-width: 250px;
     --register-btn-height: 70px;
     --register-btn-font-size: 25px;
     --register-btn-margin-top: 2vmin;
-  } */
+  }
 }
 @media only screen and (max-width: 1024px) {
   .hero-section {
@@ -115,12 +123,12 @@ export default {
     --terminal-margin-tl: 5vw;
     --animation-width: 60vw;
   }
-  /* .register-btn {
-    --register-btn-width: 150px;
+  .register-btn {
+    --register-btn-width: 170px;
     --register-btn-height: 45px;
     --register-btn-font-size: 20px;
     --register-btn-margin-top: 2vmin;
-  } */
+  }
 }
 @media only screen and (min-width: 768px) {
   .main-animation {
@@ -135,12 +143,12 @@ export default {
     --animation-width: 100vw;
 
   }
-  /* .register-btn {
-    --register-btn-width: 150px;
+  .register-btn {
+    --register-btn-width: 170px;
     --register-btn-height: 45px;
     --register-btn-font-size: 20px;
     --register-btn-margin-top: 2vmax;
-  } */
+  }
   .main-animation {
     z-index: 0;
   }
@@ -151,12 +159,12 @@ export default {
     --terminal-height: 45vh;
     --terminal-margin-tl: 5vw;
   }
-  /* .register-btn {
-    --register-btn-width: 150px;
+  .register-btn {
+    --register-btn-width: 170px;
     --register-btn-height: 45px;
     --register-btn-font-size: 20px;
     --register-btn-margin-top: 2vmax;
-  } */
+  }
 }
 .pretty-section {
   position: absolute;
@@ -173,9 +181,9 @@ export default {
   width: var(--terminal-width);
   box-shadow: 0px 0px 10px #00000088;
 }
-/* .register-btn {
+.register-btn {
   z-index: 1;
-  background: #221DC4;
+  background: #0040a7;
   color: white;
   border-radius: 5px;
   font-size: var(--register-btn-font-size);
@@ -193,7 +201,7 @@ export default {
   cursor: pointer;
   transform: scale(1.1);
   box-shadow: 0px 0px 10px #00000088;
-} */
+}
 .main-animation {
   position: absolute;
   bottom: 0;
@@ -340,12 +348,12 @@ export default {
     left: var(--terminal-margin-tl);
   }
 }
-/* @keyframes button-slide-in {
+@keyframes button-slide-in {
   0% {
     bottom: calc(var(--register-btn-margin-top) * 2 + var(--register-btn-height));
   }
   100% {
     bottom: 0;
   }
-} */
+}
 </style>

@@ -1,7 +1,7 @@
 :root {
   --dark-bg: #162e54;
-  --light-bg: #d3e3fb;
-  --light-green: #90E4A3;
+  --light-bg: #2e5086;
+  --light-green: #acdfb8;
 }
 .section {
   width: 90vw;
@@ -10,15 +10,18 @@
   flex-direction: column;
   align-items: center;
 }
+.dark-section {
+    background: var(--dark-bg);
+    color: #FFFFFF;
+}
 .light-section {
-  /* background: var(--light-green); */
-  background: #FFFFFF;
+    background: #FFFFFF;
 }
 .header {
   font-size: 36px;
 }
 .subheading {
   margin: 0;
-  font-size: 20px;
+  font-size: 22px;
   text-align: center;
 }
