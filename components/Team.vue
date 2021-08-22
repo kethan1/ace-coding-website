@@ -1,0 +1,172 @@
+<template>
+  <div class="section dark-section">
+    <div class="text">
+      <h1 class="heading"><!--
+        -->The Team<!--
+      --></h1>
+      <p class="subheading"><!--
+        -->All of the amazing students that keep ACE Coding running.<!--
+      --></p>
+    </div>
+    <div class="team">
+      <div
+        v-for="(category, categoryName, i) in categories"
+        :key="i"
+        class="team-category"
+      >
+        <h2 class="team-cat-title">{{ categoryName }}</h2>
+        <div
+          v-for="(member, j) in category"
+          :key="`${i}-${j}`"
+          class="team-member"
+        >
+          <img
+            src="../assets/member-image.png"
+            :alt="member.name + 'Image'"
+            class="member-image"
+          >
+          <p class="member-name">{{ member.name }}</p>
+          <div
+            class="member-title"
+          >
+            <component
+              v-if="['Java', 'Python', 'Web Dev'].includes(member.title)"
+              :is="'Language' + (
+                member.title == 'Web Dev'
+                  ? 'WebDev'
+                  : member.title
+              )"
+            />
+            <p>&nbsp;{{ member.title }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+
+export default {
+  data() {
+    return {
+      categories: {
+        "Club Leadership": [
+          {
+            name: "Edward Ding",
+            title: "Co-President",
+          },
+          {
+            name: "Kush Nayak",
+            title: "Co-President",
+          },
+          {
+            name: "Jessie Chan",
+            title: "Secretary/Treasurer",
+          },
+          {
+            name: "Angad Bhargav",
+            title: "HPMS Branch Director",
+          },
+          {
+            name: "Justin Yu",
+            title: "PMS Branch Director",
+          },
+          {
+            name: "Rohan Kaushal",
+            title: "HMS Branch Director",
+          },
+        ],
+        Teachers: [
+          {
+            name: "Teacher Name",
+            title: "Python",
+          },
+          {
+            name: "Teacher Name",
+            title: "Java",
+          },
+          {
+            name: "Teacher Name",
+            title: "Web Dev",
+          },
+        ],
+        Advisors: [
+          {
+            name: "Richard Hanson",
+            title: "AVHS Advisor",
+          },
+          {
+            name: "Joan Yu",
+            title: "HPMS Advisor",
+          },
+          {
+            name: "David Fischer",
+            title: "PMS Advisor",
+          },
+        ],
+      },
+    };
+  },
+};
+</script>
+
+<style>
+.team {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: var(--inner-content-width);
+  font-family: Poppins;
+}
+.team-category {
+  margin: 10px 0;
+  padding: 20px 10px;
+  background: #FFFFFF22;
+  border-radius: 10px;
+  text-align: center;
+}
+.team-category:first-child {
+  margin-top: 0;
+}
+.team-category:last-child {
+  margin-bottom: 0;
+}
+.team-cat-title {
+  margin: 0 0 10px 10px;
+}
+.team-member {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 8px;
+  background: #FFFFFF22;
+  width: 180px;
+}
+.member-image {
+  width: 100%;
+  border-radius: 5px;
+}
+.member-name {
+  font-weight: bold;
+  font-size: 20px;
+  margin: 5px 0 0 0;
+}
+.member-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.member-title p {
+  margin: 0;
+}
+.member-title span,
+.member-title svg {
+  width: 20px !important;
+  height: 20px !important;
+  margin-bottom: 1px;
+}
+</style>

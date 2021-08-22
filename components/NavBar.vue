@@ -57,12 +57,16 @@ export default {
           pageLink: "#calendar",
         },
         {
+          pageName: "Locations",
+          pageLink: "#locations",
+        },
+        {
           pageName: "Team",
-          pageLink: "#",
+          pageLink: "#team",
         },
         {
           pageName: "Contact",
-          pageLink: "#",
+          pageLink: "#contact",
         },
       ],
     };

@@ -43,7 +43,7 @@ export default {
   padding: 20px;
   border-radius: 5px;
   background: var(--primary-bg);
-  width: min(80vw, 1200px);
+  width: var(--inner-content-width);
   margin: 10px 0;
 }
 .text-image:first-child {

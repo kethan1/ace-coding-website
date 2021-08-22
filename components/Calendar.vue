@@ -73,7 +73,7 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: min(80vw, 1200px);
+  width: var(--inner-content-width);
 }
 .event {
   margin: 10px 0;

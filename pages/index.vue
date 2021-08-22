@@ -5,6 +5,7 @@
     <About id="about" />
     <Calendar id="calendar" />
     <Locations id="locations" />
+    <Team id="team" />
   </div>
 </template>
 
