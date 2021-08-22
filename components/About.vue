@@ -82,11 +82,6 @@ export default {
   font-size: 14px;
   margin: 0;
 }
-@media only screen and (min-width: 851px) {
-  .text-image.rtl {
-    direction: rtl;
-  }
-}
 @media only screen and (max-width: 850px) {
   .text-image {
     flex-direction: column;

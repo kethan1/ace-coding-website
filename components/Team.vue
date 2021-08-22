@@ -5,7 +5,7 @@
         -->The Team<!--
       --></h1>
       <p class="subheading"><!--
-        -->All of the amazing students that keep our Club running.<!--
+        -->All of the amazing students that keep our club running.<!--
       --></p>
     </div>
     <div class="team">

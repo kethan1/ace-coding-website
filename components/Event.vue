@@ -101,19 +101,19 @@ export default {
 .event-overview {
   background: linear-gradient(
     #21437a88,
-    #00AAAA55
+    #00AAAA44
   );
   background-size: 100% 200%;
-  transition: background-size 0.2s;
   overflow: hidden;
   font-family: Poppins;
   display: flex;
   color: #FFFFFF;
   border-radius: 10px;
   box-shadow: 0px 0px 0px #00000088;
-  transition: box-shadow 0.25s;
+  transition: background-size 0.2s, box-shadow 0.25s;
 }
 .event-overview:hover {
+  background-size: 100% 100%;
   box-shadow: 3px 3px 0px #00000088;
 }
 .event-time {
