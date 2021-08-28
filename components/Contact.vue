@@ -12,7 +12,7 @@
           >
           <p><strong>Have a question?</strong><br>Let us know by <!--
             -->sending an email to info@acecoding.org or filling out <!--
-            -->the form right here.</p>
+            -->the form here.</p>
         </div>
         <form class="form">
           <div class="input-group">

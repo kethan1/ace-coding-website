@@ -12,14 +12,15 @@
       <Event
         class="event"
         month="Aug"
-        :day="18"
+        :day="28"
         time-range="All Day"
-        calendar-dates="20210818%2F20210819"
-        event-title="Website Redesign Contest Submissions"
+        calendar-dates="20210828%2F20210829"
+        event-location="EGGLAND"
+        event-title="EGG DAY!!!"
         :event-description="
-          'The deadline for submissions to the ACE Coding Website Redesign Contest.'"
+          'SUPREME LEADER EGGWARD TURNS 17!!!!!!'"
       />
-      <Event
+      <!-- <Event
         class="event"
         month="Sept"
         :day="29"
@@ -31,8 +32,8 @@
           'The first ever ACE Coding session at Harvest Park Middle School '
             + 'for the 2021-2022 school year.'"
         sign-up-link="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-      />
-      <Event
+      /> -->
+      <!-- <Event
         class="event"
         month="Sept"
         :day="30"
@@ -44,8 +45,8 @@
           'The first ever ACE Coding session at Pleasanton Middle School '
             + 'for the 2021-2022 school year.'"
         sign-up-link="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-      />
-      <Event
+      /> -->
+      <!-- <Event
         class="event"
         month="Sept"
         :day="30"
@@ -57,7 +58,7 @@
           'The first ever ACE Coding session at Hart Middle School '
             + 'for the 2021-2022 school year.'"
         sign-up-link="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-      />
+      /> -->
     </div>
   </div>
 </template>
