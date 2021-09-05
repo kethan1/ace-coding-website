@@ -164,6 +164,7 @@ export default {
   background-color: #FFFFFF;
   transition: background-color 0.25s;
   resize: vertical;
+  padding: 5px;
 }
 .form input:focus,
 .form textarea:focus {
@@ -189,7 +190,7 @@ export default {
   justify-content: space-between;
 }
 .input-group > * {
-  width: 48%;
+  width: 46%;
 }
 @media only screen and (min-width: 851px) {
   .form > * {

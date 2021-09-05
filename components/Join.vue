@@ -28,14 +28,14 @@ export default {
 
 <style>
 .join-form {
-  width: min(800px, 100%);
+  width: min(640px, 100%);
   height: 600px;
   border-radius: 10px;
   background: #EDEDF3;
 }
 .description {
   text-align: center;
-  width: min(800px, 100%);
+  width: min(640px, 100%);
   font-size: 18px;
 }
 .description a {
