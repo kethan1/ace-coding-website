@@ -5,6 +5,16 @@
   --light-green: #acdfb8;
   --inner-content-width: min(80vw, 1350px);
 }
+.text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: Poppins, sans-serif;
+  margin-bottom: 2.5vw;
+}
+.description {
+  margin: 0;
+}
 .section {
   width: 90vw;
   padding: 5vw;

@@ -14,42 +14,59 @@
             -->sending an email to info@acecoding.org or filling out <!--
             -->the form here.</p>
         </div>
-        <form class="form">
-          <div class="input-group">
+        <div class="form-div">
+          <form
+            v-if="!submitted"
+            @submit.prevent="submitForm"
+            class="form"
+          >
+            <div class="input-group">
+              <input
+                type="text"
+                name="First Name"
+                placeholder="First Name*"
+                required="required"
+                v-model="firstName"
+              >
+              <input
+                type="text"
+                name="Last Name"
+                placeholder="Last Name*"
+                required="required"
+                v-model="lastName"
+              >
+            </div>
             <input
-              type="text"
-              placeholder="First Name*"
+              class="input-group"
+              name="Email"
+              type="email"
+              placeholder="Email Address*"
               required="required"
-              v-model="formInfo.firstName"
+              v-model="email"
             >
             <input
-              type="text"
-              placeholder="Last Name*"
-              required="required"
-              v-model="formInfo.lastName"
+              type="tel"
+              name="Phone Number"
+              placeholder="Phone Number"
+              v-model="phoneNumber"
             >
-          </div>
-          <input
-            class="input-group"
-            type="email"
-            placeholder="Email Address*"
-            required="required"
-            v-model="formInfo.emailAddress"
+            <textarea
+              name="Message"
+              placeholder="Message*"
+              required="required"
+              v-model="message"
+            />
+            <input
+              type="submit"
+            >
+          </form>
+          <h2
+            v-else
+            class="submitted-text"
           >
-          <input
-            type="tel"
-            placeholder="Phone Number"
-            v-model="formInfo.phoneNumber"
-          >
-          <textarea
-            placeholder="Message*"
-            required="required"
-            v-model="formInfo.message"
-          />
-          <input
-            type="submit"
-          >
-        </form>
+            Your response has been submitted.
+          </h2>
+        </div>
       </div>
     </div>
   </div>
@@ -60,14 +77,31 @@
 export default {
   data() {
     return {
-      formInfo: {
-        firstName: "",
-        lastName: "",
-        emailAddress: "",
-        phoneNumber: "",
-        message: "",
-      },
+      submitted: false,
+      firstName: "",
+      lastName: "",
+      email: "",
+      phoneNumber: "",
+      message: "",
+      endpoint: "https://formspree.io/f/xoqyykyy",
     };
+  },
+  methods: {
+    async submitForm() {
+      const data = {
+        firstName: this.firstName,
+        lastName: this.lastName,
+        email: this.email,
+        phoneNumber: this.phoneNumber,
+        message: this.message,
+      };
+      const response = await this.$axios.post(this.endpoint, data);
+      console.log(response);
+      if (response.status !== 200) {
+        document.querySelector(".submitted-text").innerHTML = "Something went wrong. Please send us an email instead.";
+      }
+      this.submitted = true;
+    },
   },
 };
 </script>
@@ -96,15 +130,11 @@ export default {
   background: #214f7a;
   width: 50%;
 }
-.form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border-radius: 5px;
-  padding: 20px;
+.form-div {
   width: var(--inner-content-width);
+  padding: 20px;
   margin-left: 10px;
-
+  border-radius: 5px;
   background: linear-gradient(
     #00AAAA22,
     #00AAAA55
@@ -113,9 +143,15 @@ export default {
   box-shadow: 0px 0px 0px var(--secondary-bg);
   transition: background-size 0.2s, box-shadow 0.25s;
 }
-.form:hover {
+.form-div:hover {
   background-size: 100% 100%;
   box-shadow: 3px 3px 0px var(--secondary-bg);
+}
+.form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .form input,
 .form textarea {
@@ -144,6 +180,10 @@ export default {
   cursor: pointer;
   transform: scale(103%);
 }
+.submitted-text {
+  text-align: center;
+  padding: 60px 0;
+}
 .input-group {
   display: flex;
   justify-content: space-between;
@@ -157,13 +197,13 @@ export default {
     margin: 10px 0;
   }
   .contact-info,
-  .form {
+  .form-div {
     max-width: 48%;
   }
 }
 @media only screen and (max-width: 850px) {
   .contact-info,
-  .form {
+  .form-div {
     max-width: 80%;
   }
   .content {

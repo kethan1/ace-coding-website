@@ -53,17 +53,21 @@ export default {
           pageLink: "#about",
         },
         {
-          pageName: "Calendar",
-          pageLink: "#calendar",
+          pageName: "Join",
+          pageLink: "#join",
         },
-        {
-          pageName: "Locations",
-          pageLink: "#locations",
-        },
-        {
-          pageName: "Team",
-          pageLink: "#team",
-        },
+        // {
+        //   pageName: "Calendar",
+        //   pageLink: "#calendar",
+        // },
+        // {
+        //   pageName: "Locations",
+        //   pageLink: "#locations",
+        // },
+        // {
+        //   pageName: "Team",
+        //   pageLink: "#team",
+        // },
         {
           pageName: "Contact",
           pageLink: "#contact",

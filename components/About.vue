@@ -6,10 +6,10 @@
       --></h1>
       <div class="text-image">
         <p class="about-text">
-          We are a group of high school students from Amador Valley High School dedicated <!--
-          -->to spreading the knowledge of programming to people of all ages. Founded in the <!--
-          -->summer of 2013 at a local Starbucks, ACE Coding began with the goal of giving as <!--
-          -->many people as possible the skills for and interest in programming as a hobby or <!--
+          We are a group of high school students dedicated to spreading the knowledge of <!--
+          -->programming to people of all ages. Founded in the summer of 2013 at a local <!--
+          -->Starbucks, ACE Coding began with the goal of giving as many people as possible<!--
+          -->the skills for and interest in programming as a hobby or <!--
           -->career. Since its inaugural four student class, ACE Coding has expanded to each <!--
           -->of the local middle schools and has now reached hundreds of students in our <!--
           -->community through its weekly lessons, as well as several hundred more across the <!--

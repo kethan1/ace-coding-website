@@ -64,16 +64,6 @@ export default {
 </script>
 
 <style>
-.text {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-family: Poppins, sans-serif;
-  margin-bottom: 2.5vw;
-}
-.description {
-  margin: 0;
-}
 .branches {
   display: flex;
   flex-direction: column;

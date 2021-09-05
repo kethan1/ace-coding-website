@@ -3,9 +3,10 @@
     <NavBar />
     <Hero id="home" />
     <About id="about" />
-    <Calendar id="calendar" />
-    <Locations id="locations" />
-    <Team id="team" />
+    <Join id="join" />
+    <!-- <Calendar id="calendar" /> -->
+    <!-- <Locations id="locations" /> -->
+    <!-- <Team id="team" /> -->
     <Contact id="contact" />
   </div>
 </template>
