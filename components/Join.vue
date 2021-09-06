@@ -6,8 +6,8 @@
       --></h1>
       <p class="description">
         Fill out the form below to register as a teacher. To be informed of all the things happening
-        throughout our club, join our <a href="http://discord.acecoding.org">Discord</a>
-        and our <a href="http://slack.acecoding.org">Slack</a>.
+        throughout our club, join our <a href="https://acecoding.org/discord">Discord</a>
+        and our <a href="https://acecoding.org/slack">Slack</a>.
       </p>
     </div>
     <iframe
