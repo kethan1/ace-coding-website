@@ -64,10 +64,10 @@ export default {
         //   pageName: "Locations",
         //   pageLink: "#locations",
         // },
-        // {
-        //   pageName: "Team",
-        //   pageLink: "#team",
-        // },
+        {
+          pageName: "Team",
+          pageLink: "#team",
+        },
         {
           pageName: "Contact",
           pageLink: "#contact",
