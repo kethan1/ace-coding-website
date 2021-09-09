@@ -6,7 +6,7 @@
     <Join id="join" />
     <!-- <Calendar id="calendar" /> -->
     <!-- <Locations id="locations" /> -->
-    <!-- <Team id="team" /> -->
+    <Team id="team" />
     <Contact id="contact" />
   </div>
 </template>

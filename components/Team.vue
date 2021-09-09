@@ -1,5 +1,5 @@
 <template>
-  <div class="section dark-section">
+  <div class="section dark-section team-section">
     <div class="text">
       <h1 class="heading"><!--
         -->The Team<!--
@@ -21,7 +21,7 @@
           class="team-member"
         >
           <img
-            src="../assets/member-image.png"
+            :src="require(`@/assets/${member.image}`)"
             :alt="member.name + 'Image'"
             class="member-image"
           >
@@ -53,58 +53,64 @@ export default {
       categories: {
         Leadership: [
           {
+            image: "profile-photos/edward-ding.png",
             name: "Edward Ding",
             title: "Co-President",
           },
           {
+            image: "profile-photos/kush-nayak.png",
             name: "Kush Nayak",
             title: "Co-President",
           },
           {
+            image: "profile-photos/jessie-chan.png",
             name: "Jessie Chan",
             title: "Secretary/Treasurer",
           },
           {
+            image: "profile-photos/angad-bhargav.png",
             name: "Angad Bhargav",
             title: "HPMS Branch Director",
           },
           {
+            image: "profile-photos/justin-yu.png",
             name: "Justin Yu",
             title: "PMS Branch Director",
           },
           {
+            image: "profile-photos/anonymous-profile.png",
             name: "Rohan Kaushal",
             title: "HMS Branch Director",
           },
         ],
-        Teachers: [
-          {
-            name: "Teacher Name",
-            title: "Python",
-          },
-          {
-            name: "Teacher Name",
-            title: "Java",
-          },
-          {
-            name: "Teacher Name",
-            title: "Web Dev",
-          },
-        ],
-        Advisors: [
-          {
-            name: "Richard Hanson",
-            title: "AVHS Advisor",
-          },
-          {
-            name: "Joan Yu",
-            title: "HPMS Advisor",
-          },
-          {
-            name: "David Fischer",
-            title: "PMS Advisor",
-          },
-        ],
+        // Teachers: [
+        //   {
+        //     name: "Teacher Name",
+        //     title: "Python",
+        //   },
+        //   {
+        //     name: "Teacher Name",
+        //     title: "Java",
+        //   },
+        //   {
+        //     name: "Teacher Name",
+        //     title: "Web Dev",
+        //   },
+        // ],
+        // Advisors: [
+        //   {
+        //     name: "Richard Hanson",
+        //     title: "AVHS Advisor",
+        //   },
+        //   {
+        //     name: "Joan Yu",
+        //     title: "HPMS Advisor",
+        //   },
+        //   {
+        //     name: "David Fischer",
+        //     title: "PMS Advisor",
+        //   },
+        // ],
       },
     };
   },
@@ -112,6 +118,9 @@ export default {
 </script>
 
 <style>
+.team-section {
+  padding-top: 0;
+}
 .team {
   display: flex;
   flex-direction: column;
