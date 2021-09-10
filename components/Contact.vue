@@ -37,7 +37,6 @@
               >
             </div>
             <input
-              class="input-group"
               name="Email"
               type="email"
               placeholder="Email Address*"
@@ -186,6 +185,7 @@ export default {
   padding: 60px 0;
 }
 .input-group {
+  width: 93% !important;
   display: flex;
   justify-content: space-between;
 }
