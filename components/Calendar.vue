@@ -1,5 +1,5 @@
 <template>
-  <div class="section dark-section">
+  <div class="section light-section">
     <div class="text">
       <h1 class="heading"><!--
         -->Calendar<!--
@@ -11,14 +11,16 @@
     <div class="events">
       <Event
         class="event"
-        month="Aug"
-        :day="28"
-        time-range="All Day"
-        calendar-dates="20210828%2F20210829"
-        event-location="EGGLAND"
-        event-title="EGG DAY!!!"
+        month="October"
+        :day="20"
+        time-range="3:30-4:30"
+        calendar-dates="20211020T223000Z%2F20211020T233000Z"
+        event-title="First session of ACE Coding"
         :event-description="
-          'SUPREME LEADER EGGWARD TURNS 17!!!!!!'"
+          `On October 20th, we will be holding the first session of ACE Coding
+          for the 2021-2022 school year. The event will be held online via
+          Zoom.`
+        "
       />
       <!-- <Event
         class="event"

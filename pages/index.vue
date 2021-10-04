@@ -4,7 +4,7 @@
     <Hero id="home" />
     <About id="about" />
     <Join id="join" />
-    <!-- <Calendar id="calendar" /> -->
+    <Calendar id="calendar" />
     <!-- <Locations id="locations" /> -->
     <Team id="team" />
     <Contact id="contact" />

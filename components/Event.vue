@@ -100,8 +100,8 @@ export default {
 <style>
 .event-overview {
   background: linear-gradient(
-    #21437a88,
-    #00AAAA44
+    #21437a,
+    #008181
   );
   background-size: 100% 200%;
   overflow: hidden;
