@@ -56,10 +56,10 @@ export default {
           pageName: "Join",
           pageLink: "#join",
         },
-        // {
-        //   pageName: "Calendar",
-        //   pageLink: "#calendar",
-        // },
+        {
+          pageName: "Calendar",
+          pageLink: "#calendar",
+        },
         // {
         //   pageName: "Locations",
         //   pageLink: "#locations",
