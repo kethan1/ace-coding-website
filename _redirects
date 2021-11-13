@@ -1,5 +1,11 @@
-/codeday https://thirsty-panini-757696.netlify.app
-/discord https://discord.com/invite/JXPVNxBEnS
-/slack https://acecoding.slack.com/join/shared_invite/zt-gxrkmg1c-GNKWj0Zvc67snlA66NtgmQ
-/dublin https://docs.google.com/forms/d/e/1FAIpQLSd3SGMER3oAiGKOaRHtx8TO8cQ5E0PkDCUPsBuRBd5p9PcmpA/viewform
-/join https://acecoding.org/#join
+# ACE Code Day website redirects:
+/codeday/* https://thirsty-panini-757696.netlify.app
+https://codeday.acecoding.org/* https://thirsty-panini-757696.netlify.app 200!
+# Discord server invite redirects:
+/discord/* https://discord.com/invite/JXPVNxBEnS
+https://discord.acecoding.org/* https://discord.com/invite/JXPVNxBEnS 200!
+# Slack workspace invite redirects:
+/slack/* https://acecoding.slack.com/join/shared_invite/zt-gxrkmg1c-GNKWj0Zvc67snlA66NtgmQ
+https://slack.acecoding.org/* https://acecoding.slack.com/join/shared_invite/zt-gxrkmg1c-GNKWj0Zvc67snlA66NtgmQ 200!
+/dublin/* https://docs.google.com/forms/d/e/1FAIpQLSd3SGMER3oAiGKOaRHtx8TO8cQ5E0PkDCUPsBuRBd5p9PcmpA/viewform
+/join/* https://acecoding.org/#join
