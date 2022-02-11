@@ -1,15 +1,15 @@
 # ACE Code Day website redirects:
 /codeday/* https://thirsty-panini-757696.netlify.app
-https://codeday.acecoding.org/* https://thirsty-panini-757696.netlify.app
+https://codeday.acecoding.org/* https://thirsty-panini-757696.netlify.app 301!
 # Discord server invite redirects:
 /discord/* https://discord.com/invite/JXPVNxBEnS
-https://discord.acecoding.org/* https://discord.com/invite/JXPVNxBEnS
+https://discord.acecoding.org/* https://discord.com/invite/JXPVNxBEnS 301!
 # Slack workspace invite redirects:
 /slack/* https://acecoding.slack.com/join/shared_invite/zt-gxrkmg1c-GNKWj0Zvc67snlA66NtgmQ
-https://slack.acecoding.org/* https://acecoding.slack.com/join/shared_invite/zt-gxrkmg1c-GNKWj0Zvc67snlA66NtgmQ
+https://slack.acecoding.org/* https://acecoding.slack.com/join/shared_invite/zt-gxrkmg1c-GNKWj0Zvc67snlA66NtgmQ 301!
 # HPMS redirects:
-https://hpms.acecoding.org/* https://forms.gle/6ZpanzSSG9pbS1tN8
+https://hpms.acecoding.org/* https://forms.gle/6ZpanzSSG9pbS1tN8 301!
 # PMS redirects:
-https://pms.acecoding.org/* https://forms.gle/Thzd1TEfCMA7iq7H8
+https://pms.acecoding.org/* https://forms.gle/Thzd1TEfCMA7iq7H8 301!
 # Miscellaneous:
 /dublin/* https://docs.google.com/forms/d/e/1FAIpQLSd3SGMER3oAiGKOaRHtx8TO8cQ5E0PkDCUPsBuRBd5p9PcmpA/viewform
