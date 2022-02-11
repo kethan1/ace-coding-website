@@ -5,18 +5,15 @@
         -->Join<!--
       --></h1>
       <p class="description">
-        Fill out the form below to register as a student. To be informed of all the things happening
-        throughout our club, join our <a href="https://acecoding.org/discord">Discord</a>
+        Fill out the appropriate form below to register as a student.
+        To be informed of all the things happening throughout our club, join our <a href="https://acecoding.org/discord">Discord</a>
         and our <a href="https://acecoding.org/slack">Slack</a>.
       </p>
+      <div class="join-links">
+        <a href="https://forms.gle/6ZpanzSSG9pbS1tN8">HPMS Sign up Form <OpenInNew /></a>
+        <a href="https://forms.gle/Thzd1TEfCMA7iq7H8">PMS Sign up Form <OpenInNew /></a>
+      </div>
     </div>
-    <iframe
-      class="join-form"
-      src="https://docs.google.com/forms/d/e/1FAIpQLSdqhR8YB2x1Cb7PMRIbfHM5EZ-oAJSGFxLJgiSOeTVoLWwi4w/viewform?embedded=true"
-      frameborder="0"
-      marginheight="0"
-      marginwidth="0"
-    >Loading…</iframe>
   </div>
 </template>
 
@@ -49,5 +46,28 @@ export default {
   -moz-background-clip: text;
   -webkit-background-clip: text;
   background-clip: text;
+}
+.join-links {
+  width: 500px;
+  padding-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 20px;
+}
+.join-links a {
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 5px;
+  margin: 5px;
+  border-radius: 5px;
+  background: #FFFFFF22;
+  color: white;
+  transition: transform 0.2s;
+}
+.join-links a:hover {
+  transform: scale(102%);
 }
 </style>

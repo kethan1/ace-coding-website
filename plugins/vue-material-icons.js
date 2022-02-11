@@ -2,6 +2,7 @@ import Vue from "vue";
 import "vue-material-design-icons/styles.css";
 import mapMarker from "vue-material-design-icons/MapMarker.vue";
 import calendarImport from "vue-material-design-icons/CalendarImport.vue";
+import openInNew from "vue-material-design-icons/OpenInNew.vue";
 import laptop from "vue-material-design-icons/Laptop.vue";
 import clipboardText from "vue-material-design-icons/ClipboardText.vue";
 import languageJava from "vue-material-design-icons/LanguageJava.vue";
@@ -11,6 +12,7 @@ import languageWebDev from "vue-material-design-icons/Web.vue";
 export default function materialIcons() {
   Vue.component("MapMarker", mapMarker);
   Vue.component("CalendarImport", calendarImport);
+  Vue.component("OpenInNew", openInNew);
   Vue.component("Laptop", laptop);
   Vue.component("ClipboardText", clipboardText);
   Vue.component("LanguageJava", languageJava);

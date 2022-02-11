@@ -5,7 +5,7 @@
         -->The Team<!--
       --></h1>
       <p class="subheading"><!--
-        -->All of the amazing students that keep our club running.<!--
+        -->All of the students that keep our club running.<!--
       --></p>
     </div>
     <div class="team">
@@ -118,9 +118,6 @@ export default {
 </script>
 
 <style>
-.team-section {
-  padding-top: 0;
-}
 .team {
   display: flex;
   flex-direction: column;
