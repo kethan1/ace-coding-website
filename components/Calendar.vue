@@ -12,9 +12,9 @@
       <Event
         class="event"
         month="Feb"
-        :day="21"
+        :day="28"
         time-range="3:30-4:30"
-        calendar-dates="20220221T233000Z%2F20220221T243000Z"
+        calendar-dates="20220228T233000Z%2F20220228T243000Z"
         event-title="HPMS - First Meeting of the Year!"
         event-location="Harvest Park Middle School"
         :event-description="
@@ -25,9 +25,9 @@
       <Event
         class="event"
         month="Mar"
-        :day="2"
+        :day="3"
         time-range="3:45-4:45"
-        calendar-dates="20220202T234500Z%2F20220202T244500Z"
+        calendar-dates="20220303T234500Z%2F20220303T244500Z"
         event-title="PMS - First Meeting of the Year!"
         event-location="Pleasanton Middle School"
         :event-description="
