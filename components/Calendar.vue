@@ -35,19 +35,19 @@
             + 'for the 2021-2022 school year.'"
         sign-up-link="https://forms.gle/Thzd1TEfCMA7iq7H8"
       />
-      <!-- <Event
+      <Event
         class="event"
         month="Mar"
-        :day="2"
+        :day="3"
         time-range="3:45-4:45"
-        calendar-dates="20220202T234500Z%2F20220202T244500Z"
+        calendar-dates="20220303T234500Z%2F20220303T244500Z"
         event-title="HMS - First Meeting of the Year!"
         event-location="Hart Middle School"
         :event-description="
           'The first ever ACE Coding meeting at Hart Middle School '
             + 'for the 2021-2022 school year.'"
-        sign-up-link="#"
-      /> -->
+        sign-up-link="https://forms.gle/GKKCeGoRmLzBTZnTA"
+      />
     </div>
   </div>
 </template>

@@ -12,6 +12,7 @@
       <div class="join-links">
         <a href="https://forms.gle/6ZpanzSSG9pbS1tN8">HPMS Sign up Form <OpenInNew /></a>
         <a href="https://forms.gle/Thzd1TEfCMA7iq7H8">PMS Sign up Form <OpenInNew /></a>
+        <a href="https://forms.gle/GKKCeGoRmLzBTZnTA">HMS Sign up Form <OpenInNew /></a>
       </div>
     </div>
   </div>
