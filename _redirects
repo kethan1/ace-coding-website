@@ -16,6 +16,6 @@ https://hms.acecoding.org/* https://forms.gle/GKKCeGoRmLzBTZnTA 301!
 # Docs redirects:
 https://docs.acecoding.org/* https://acecoding.herokuapp.com/:splat 301!
 #ML redirects:
-https://ml.acecoding.org/* http://24.4.77.20/:splat 301!
+https://ml.acecoding.org/* http://24.4.77.20:8888/:splat 301!
 # Miscellaneous:
 /dublin/* https://docs.google.com/forms/d/e/1FAIpQLSd3SGMER3oAiGKOaRHtx8TO8cQ5E0PkDCUPsBuRBd5p9PcmpA/viewform
