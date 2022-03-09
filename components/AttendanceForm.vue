@@ -11,7 +11,7 @@
         type="text"
         name="first-name"
         id="first-name"
-        required
+        required="required"
       >
     </div>
     <div
@@ -25,7 +25,7 @@
         type="text"
         name="last-name"
         id="last-name"
-        required
+        required="required"
       >
     </div>
     <div
@@ -40,7 +40,7 @@
         type="email"
         name="email"
         id="email"
-        required
+        required="required"
       >
     </div>
     <div
@@ -54,7 +54,7 @@
         type="text"
         name="group-number"
         id="group-number"
-        required
+        required="required"
       >
     </div>
     <div
@@ -69,7 +69,7 @@
         type="text"
         name="desk-number"
         id="desk-number"
-        required
+        required="required"
       >
     </div>
     <input
