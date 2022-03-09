@@ -1,34 +1,40 @@
 <template>
   <form class="attendance-form">
-    <label
-      class="form-label"
-      for="first-name"
+    <div
+      class="form-item"
     >
-      <h2 class="required">First Name</h2>
+      <label
+        for="first-name"
+        class="required"
+      >First Name</label>
       <input
         type="text"
         name="first-name"
         id="first-name"
         required
       >
-    </label>
-    <label
-      class="form-label"
-      for="last-name"
+    </div>
+    <div
+      class="form-item"
     >
-      <h2 class="required">Last Name</h2>
+      <label
+        for="last-name"
+        class="required"
+      >Last Name</label>
       <input
         type="text"
         name="last-name"
         id="last-name"
         required
       >
-    </label>
-    <label
-      class="form-label"
-      for="email"
+    </div>
+    <div
+      class="form-item"
     >
-      <h2 class="required">Email</h2>
+      <label
+        for="email"
+        class="required"
+      >Email</label>
       <p>Preferably enter your school email address</p>
       <input
         type="email"
@@ -36,24 +42,28 @@
         id="email"
         required
       >
-    </label>
-    <label
-      class="form-label"
-      for="group-number"
+    </div>
+    <div
+      class="form-item"
     >
-      <h2 class="required">Table Group Number</h2>
+      <label
+        for="text"
+        class="required"
+      >Table Group Number</label>
       <input
         type="text"
         name="group-number"
         id="group-number"
         required
       >
-    </label>
-    <label
-      class="form-label"
-      for="desk-number"
+    </div>
+    <div
+      class="form-item"
     >
-      <h2 class="required">Desk Number</h2>
+      <label
+        for="desk-number"
+        class="required"
+      >Desk Number</label>
       <p>If you are seated on one of the ends of your desk, please put "EXTRA"</p>
       <input
         type="text"
@@ -61,7 +71,7 @@
         id="desk-number"
         required
       >
-    </label>
+    </div>
     <input
       type="submit"
       value="Submit"
@@ -98,20 +108,21 @@ export default {
   caret-color: var(--light-green);
   transition: transform 0.2s;
 }
-.attendance-form input[type="submit"]:hover {
+.attendance-form input[type="submit"]:hover,
+.attendance-form input[type="submit"]:focus-visible {
   cursor: pointer;
   transform: scale(103%);
 }
 
-.form-label {
+.form-item {
   padding-bottom: 20px;
   font-family: "Poppins";
   color: white;
 }
-.form-label * {
+.form-item * {
   margin: 0;
 }
-.form-label input {
+.form-item input {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -128,13 +139,23 @@ export default {
   color: white;
   caret-color: var(--light-green);
 }
-.form-label h2 {
+.form-item input:-webkit-autofill,
+.form-item input:-webkit-autofill:hover,
+.form-item input:-webkit-autofill:focus,
+.form-item input:-webkit-autofill:active {
+  box-shadow: 0 0 0 100px var(--lighter-bg) inset, 1px 1px 4px #00000044 !important;
+  -webkit-box-shadow: 0 0 0 100px var(--lighter-bg) inset, 1px 1px 4px #00000044 !important;
+  -webkit-text-fill-color: white !important;
+  caret-color: var(--light-green) !important;
+}
+
+.form-item label {
   font-size: 24px;
 }
-.form-label p {
+.form-item p {
   color: #FFFFFFCC;
 }
-.form-label h2.required::after {
+.form-item label.required::after {
   content: "*";
   font-size: 30px;
   font-weight: 400;
