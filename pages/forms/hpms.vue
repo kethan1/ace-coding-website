@@ -1,26 +1,30 @@
 <template>
-  <div>
-    <NavBar />
-    <Hero id="home" />
-    <About id="about" />
-    <Join id="join" />
-    <Calendar id="calendar" />
-    <!-- <Locations id="locations" /> -->
-    <Team id="team" />
-    <Contact id="contact" />
+  <div class="form-container">
+    <h1>HPMS Attendance Form</h1>
+    <AttendanceForm
+      name="hpms-attendance"
+      method="POST"
+      data-netlify="true"
+      action="/forms/hpms"
+    />
   </div>
 </template>
 
 <script>
 export default {
-  data() {
-    return {
-      "logo-link": "#home",
-    };
-  },
+
 };
 </script>
+
 <style>
+.form-container {
+  width: min(90%, 600px);
+  margin: 0 auto;
+}
+.form-container h1 {
+  font-family: "Poppins";
+  color: white;
+}
 body {
   margin: 0;
   overflow-x: hidden;
@@ -67,5 +71,9 @@ body::-webkit-scrollbar-thumb {
   -moz-box-shadow:    inset 1px 1px 3px #FFFFFF22, -1px -1px 3px #00000022;
   -webkit-box-shadow: inset 1px 1px 3px #FFFFFF22, -1px -1px 3px #00000022;
   box-shadow:         inset 1px 1px 3px #FFFFFF22, -1px -1px 3px #00000022;
+}
+.something {
+  width: 100vw;
+  height: 100vh;
 }
 </style>
