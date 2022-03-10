@@ -1,5 +1,8 @@
 <template>
-  <form class="attendance-form">
+  <form
+    class="attendance-form"
+    @submit="validateResponses"
+  >
     <div
       class="form-item"
     >
@@ -9,10 +12,16 @@
       >First Name</label>
       <input
         type="text"
+        v-model="firstName"
         name="first-name"
         id="first-name"
-        required="required"
       >
+      <p
+        v-if="submitAttempted && firstName === ''"
+        class="required-reminder"
+      >
+        This field is required
+      </p>
     </div>
     <div
       class="form-item"
@@ -23,10 +32,16 @@
       >Last Name</label>
       <input
         type="text"
+        v-model="lastName"
         name="last-name"
         id="last-name"
-        required="required"
       >
+      <p
+        v-if="submitAttempted && lastName === ''"
+        class="required-reminder"
+      >
+        This field is required
+      </p>
     </div>
     <div
       class="form-item"
@@ -35,13 +50,19 @@
         for="email"
         class="required"
       >Email</label>
-      <p>Preferably enter your school email address</p>
+      <p>Preferably enter your <i>school</i> email address</p>
       <input
         type="email"
+        v-model="email"
         name="email"
         id="email"
-        required="required"
       >
+      <p
+        v-if="submitAttempted && email === ''"
+        class="required-reminder"
+      >
+        This field is required
+      </p>
     </div>
     <div
       class="form-item"
@@ -52,10 +73,16 @@
       >Table Group Number</label>
       <input
         type="text"
+        v-model="groupNumber"
         name="group-number"
         id="group-number"
-        required="required"
       >
+      <p
+        v-if="submitAttempted && groupNumber === ''"
+        class="required-reminder"
+      >
+        This field is required
+      </p>
     </div>
     <div
       class="form-item"
@@ -67,10 +94,16 @@
       <p>If you are seated on one of the ends of your desk, please put "EXTRA"</p>
       <input
         type="text"
+        v-model="deskNumber"
         name="desk-number"
         id="desk-number"
-        required="required"
       >
+      <p
+        v-if="submitAttempted && deskNumber === ''"
+        class="required-reminder"
+      >
+        This field is required
+      </p>
     </div>
     <input
       type="submit"
@@ -81,7 +114,31 @@
 
 <script>
 export default {
-
+  data() {
+    return {
+      firstName: "",
+      lastName: "",
+      email: "",
+      groupNumber: "",
+      deskNumber: "",
+      submitAttempted: false,
+    };
+  },
+  methods: {
+    validateResponses(e) {
+      this.submitAttempted = true;
+      if (
+        this.firstName !== ""
+        && this.lastName !== ""
+        && this.email !== ""
+        && this.groupNumber !== ""
+        && this.lastName !== ""
+      ) {
+        return;
+      }
+      e.preventDefault();
+    },
+  },
 };
 </script>
 
@@ -154,6 +211,10 @@ export default {
 }
 .form-item p {
   color: #FFFFFFCC;
+}
+.form-item p.required-reminder {
+  margin-top: 5px;
+  color: var(--light-green);
 }
 .form-item label.required::after {
   content: "*";

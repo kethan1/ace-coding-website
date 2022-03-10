@@ -5,7 +5,7 @@
       name="hpms-attendance"
       method="POST"
       data-netlify="true"
-      action="/forms/hpms"
+      action="/hpms/attendance"
     />
   </div>
 </template>
