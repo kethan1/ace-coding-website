@@ -11,10 +11,8 @@ https://slack.acecoding.org/* https://acecoding.slack.com/join/shared_invite/zt-
 https://hpms.acecoding.org/ https://acecoding.org 301!
 https://hpms.acecoding.org/join https://forms.gle/6ZpanzSSG9pbS1tN8 301!
 https://hpms.acecoding.org/attendance https://acecoding.org/hpms/attendance 200!
-# PMS redirects:
-https://pms.acecoding.org/* https://forms.gle/Thzd1TEfCMA7iq7H8 301!
-# HMS redirects:
-https://hms.acecoding.org/* https://forms.gle/GKKCeGoRmLzBTZnTA 301!
+# Summer Workshops
+https://workshops.acecoding.org/* https://forms.gle/fbYaRq6aWxvvd8Ez5 301!
 # Docs redirects:
 https://docs.acecoding.org/* https://acecoding.herokuapp.com/:splat 301!
 # Forms redirects:
