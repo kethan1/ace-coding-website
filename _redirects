@@ -21,4 +21,4 @@ https://forms.acecoding.org/* https://acecoding.org/forms/:splat 200!
 https://ml.acecoding.org/* http://24.4.77.20:8888/:splat 301!
 # Miscellaneous:
 /dublin/* https://docs.google.com/forms/d/e/1FAIpQLSd3SGMER3oAiGKOaRHtx8TO8cQ5E0PkDCUPsBuRBd5p9PcmpA/viewform
-https://join.acecoding.org/* https://acecoding.org/#join/:splat 200
+https://join.acecoding.org/* https://acecoding.org/#join/:splat 200!
