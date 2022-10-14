@@ -5,15 +5,17 @@
         -->Join<!--
       --></h1>
       <p class="description">
-        Fill out the appropriate form below to register as a student.
-        To be informed of all the things happening throughout our club, join our <a href="https://acecoding.org/discord">Discord</a>
-        and our <a href="https://acecoding.org/slack">Slack</a>.
+        <!-- Fill out the appropriate form below to register as a student. -->
+        To be informed of all the things happening throughout our club, join our <a
+          href="https://discord.acecoding.org"
+          target="_blank"
+        >Discord</a>.
       </p>
-      <div class="join-links">
+      <!-- <div class="join-links">
         <a href="https://forms.gle/6ZpanzSSG9pbS1tN8">HPMS Sign up Form <OpenInNew /></a>
         <a href="https://forms.gle/Thzd1TEfCMA7iq7H8">PMS Sign up Form <OpenInNew /></a>
         <a href="https://forms.gle/GKKCeGoRmLzBTZnTA">HMS Sign up Form <OpenInNew /></a>
-      </div>
+      </div> -->
     </div>
   </div>
 </template>

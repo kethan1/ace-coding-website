@@ -7,9 +7,10 @@ https://discord.acecoding.org/* https://discord.com/invite/JXPVNxBEnS 301!
 # Slack workspace invite redirects:
 /slack/* https://acecoding.slack.com/join/shared_invite/zt-gxrkmg1c-GNKWj0Zvc67snlA66NtgmQ
 https://slack.acecoding.org/* https://acecoding.slack.com/join/shared_invite/zt-gxrkmg1c-GNKWj0Zvc67snlA66NtgmQ 301!
-# HPMS redirects:
-https://hpms.acecoding.org/ https://acecoding.org 301!
-https://hpms.acecoding.org/join https://forms.gle/6ZpanzSSG9pbS1tN8 301!
+# Middle school redirects:
+https://hpms.acecoding.org/ https://docs.google.com/forms/d/e/1FAIpQLSc_OrOxcBZ4BIgA8GjfGJnSu7wNDFvHnsg8bAQeMZYkj6pU3Q/viewform?usp=sf_link 301!
+https://pms.acecoding.org/ https://docs.google.com/forms/d/e/1FAIpQLSdjK5CoGZH75WziqPbGU97rO1XL1w9liMifGQFUOEjVDiW9Yw/viewform?usp=sf_link 301!
+https://hms.acecoding.org/ https://docs.google.com/forms/d/e/1FAIpQLScrgcIMQwgH3f5TYYUGVFMDQUtZgGPjHWJMa1m3Hh9OmBmTrw/viewform?usp=sf_link 301!
 https://hpms.acecoding.org/attendance https://acecoding.org/hpms/attendance 200!
 # Summer Workshops
 https://workshops.acecoding.org/* https://forms.gle/fbYaRq6aWxvvd8Ez5 301!

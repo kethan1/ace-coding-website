@@ -53,11 +53,6 @@ export default {
       categories: {
         Leadership: [
           {
-            image: "profile-photos/edward-ding.png",
-            name: "Edward Ding",
-            title: "Co-President",
-          },
-          {
             image: "profile-photos/kush-nayak.png",
             name: "Kush Nayak",
             title: "Co-President",
@@ -65,12 +60,17 @@ export default {
           {
             image: "profile-photos/jessie-chan.png",
             name: "Jessie Chan",
-            title: "Secretary/Treasurer",
+            title: "Co-President",
           },
           {
             image: "profile-photos/angad-bhargav.png",
             name: "Angad Bhargav",
-            title: "HPMS Branch Director",
+            title: "Secretary/Treasurer",
+          },
+          {
+            image: "profile-photos/anonymous-profile.png",
+            name: "Helen Hoang",
+            title: "PMS Branch Director",
           },
           {
             image: "profile-photos/justin-yu.png",
@@ -78,8 +78,8 @@ export default {
             title: "PMS Branch Director",
           },
           {
-            image: "profile-photos/rohan-kaushal.png",
-            name: "Rohan Kaushal",
+            image: "profile-photos/anonymous-profile.png",
+            name: "Vivaan Vora",
             title: "HMS Branch Director",
           },
         ],
