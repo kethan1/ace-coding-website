@@ -68,7 +68,7 @@ export default {
             title: "Secretary/Treasurer",
           },
           {
-            image: "profile-photos/anonymous-profile.png",
+            image: "profile-photos/helen-hoang.png",
             name: "Helen Hoang",
             title: "PMS Branch Director",
           },
