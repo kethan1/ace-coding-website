@@ -78,7 +78,7 @@ export default {
             title: "PMS Branch Director",
           },
           {
-            image: "profile-photos/anonymous-profile.png",
+            image: "profile-photos/vivaan-vora.png",
             name: "Vivaan Vora",
             title: "HMS Branch Director",
           },
