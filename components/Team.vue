@@ -70,7 +70,7 @@ export default {
           {
             image: "profile-photos/helen-hoang.png",
             name: "Helen Hoang",
-            title: "PMS Branch Director",
+            title: "HPMS Branch Director",
           },
           {
             image: "profile-photos/justin-yu.png",
