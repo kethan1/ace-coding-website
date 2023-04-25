@@ -1,6 +1,7 @@
 # ACE Code Day website redirects:
 /codeday/* https://thirsty-panini-757696.netlify.app
 https://codeday.acecoding.org/* https://thirsty-panini-757696.netlify.app 301!
+https://dinohacks.acecoding.org/* https://forms.gle/AT4dAejyqV2g8yE2A 301!
 # Discord server invite redirects:
 /discord/* https://discord.com/invite/JXPVNxBEnS
 https://discord.acecoding.org/* https://discord.com/invite/JXPVNxBEnS 301!
