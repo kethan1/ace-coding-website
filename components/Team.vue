@@ -53,33 +53,33 @@ export default {
       categories: {
         Leadership: [
           {
-            image: "profile-photos/kush-nayak.png",
-            name: "Kush Nayak",
-            title: "Co-President",
-          },
-          {
-            image: "profile-photos/jessie-chan.png",
-            name: "Jessie Chan",
-            title: "Co-President",
-          },
-          {
             image: "profile-photos/angad-bhargav.png",
             name: "Angad Bhargav",
-            title: "Secretary/Treasurer",
+            title: "Co-President",
           },
           {
             image: "profile-photos/helen-hoang.png",
             name: "Helen Hoang",
-            title: "HPMS Branch Director",
-          },
-          {
-            image: "profile-photos/justin-yu.png",
-            name: "Justin Yu",
-            title: "PMS Branch Director",
+            title: "Co-President",
           },
           {
             image: "profile-photos/vivaan-vora.png",
             name: "Vivaan Vora",
+            title: "Secretary/Treasurer",
+          },
+          {
+            image: "profile-photos/anonymous-profile.png",
+            name: "Aathmanathan Muruganathan",
+            title: "HPMS Branch Director",
+          },
+          {
+            image: "profile-photos/gaurav-gupta.png",
+            name: "Gaurav Gupta",
+            title: "PMS Branch Director",
+          },
+          {
+            image: "profile-photos/arnav-dhole.webp",
+            name: "Arnav Dhole",
             title: "HMS Branch Director",
           },
         ],
