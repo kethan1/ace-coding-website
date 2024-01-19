@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .text-outline-shadow {
+    @apply relative;
+    z-index: 1;
+  }
+  .text-outline-shadow::before {
+    @apply absolute -translate-x-1 translate-y-1 text-transparent;
+    z-index: -1;
+    -webkit-text-stroke: 1px #27c940;
+  }
+  .overflow-y-ellipsis {
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    whitespace: nowrap;
+    text-overflow: clip;
+  }
+}

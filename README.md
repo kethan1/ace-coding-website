@@ -1,4 +1,4 @@
-# ace-coding-website
+# ace-code-day-website
 
 ## Build Setup
 

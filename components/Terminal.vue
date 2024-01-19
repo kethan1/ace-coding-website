@@ -1,98 +1,78 @@
 <template>
-  <div
-    :class="[osInfo.os, 'terminal']"
-    :style="{
-      '--terminal-header-height': osInfo.headerHeight,
-    }"
-  >
+  <div id="terminal-container">
     <div
-      class="window-header"
+      id="terminal-content"
+      class="h-full text-base overflow-hidden"
+      :class="{
+        'font-windows-mono text-white leading-[1.15]': osInfo.os === 'windows',
+        'font-mac-mono text-[#FAFAFA] leading-none': osInfo.os === 'mac',
+        'font-linux-mono text-[#EEEEEC] leading-none': osInfo.os === 'linux',
+      }"
     >
-      <div
-        class="window-info"
-      >
-        <img
-          v-if="osInfo.windowIcon"
-          class="window-icon"
-          :src="osInfo.windowIcon"
-        >
-        <p class="window-title">{{ osInfo.terminalTitle }}</p>
-      </div>
-      <div class="window-options">
+      <div class="flex flex-col h-full">
         <div
-          v-for="(optionImage, option, index) in osInfo.windowOptions"
-          :key="index"
-          :class="option"
-        >
-          <img
-            :src="optionImage"
-          >
-        </div>
-      </div>
-    </div>
-    <div class="window-content"><!--
-      --><div
-          class="ascii-art-logo"
           v-show="showLogo"
-        ><!--
-        --><span><!--
-          -->{{ asciiArtLogo }}<!--
-        --></span><!--
-      --></div><!--
-      --><p class="cmd-prompt"><!--
+          class="flex-1 flex justify-center items-center"
+        >
+          <span class="text-left whitespace-pre">{{ asciiArtLogo }}</span>
+        </div>
+        <p class="flex-none">
+          <template v-if="osInfo.os === 'windows'">
+            <span>C:\Users\Rexy></span>
+          </template>
+          <template v-else-if="osInfo.os === 'mac'">
+            <span>Rexy-Desktop:~ rexy$&nbsp;</span>
+          </template>
+          <template v-else>
+            <span class="text-[#8AE234] font-semibold">rexy@rexy-desktop</span><!--
+        --><span class="font-semibold">:</span><!--
+        --><span class="text-[#729FCF] font-semibold">~</span><!--
+        --><span class="font-semibold">$&nbsp;</span>
+          </template><!--
+        --><span>{{ typedCmd }}</span><!--
         --><span
-              v-for="(span, index) in osInfo.terminalPrefix"
-              :key="index"
-              :class="span.spanClass"
-            >{{ span.spanText }}</span><!--
-        --><span
-            class="type-cmd"
-           >{{ typedCmd }}</span><!--
-        --><span class="cursor">&nbsp;</span><!--
-      --></p>
+          id="cursor"
+          :class="{
+            'relative bottom-1 border-b-4 border-white': osInfo.os === 'windows',
+            'bg-[#9CA3AF]': osInfo.os === 'linux',
+            'bg-[#9C9C9C]': osInfo.os === 'mac',
+          }"
+        >&nbsp;</span>
+        </p>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
-import windowsTerminalIcon from "../assets/win/terminal_icon.png";
-import windowsMinimizeIcon from "../assets/win/minimize_icon.svg";
-import windowsMaximizeIcon from "../assets/win/maximize_icon.svg";
-import windowsCloseIcon from "../assets/win/close_icon.svg";
-import macTerminalIcon from "../assets/mac/terminal_icon.png";
-import macMinimizeIcon from "../assets/mac/minimize_icon.svg";
-import macMaximizeIcon from "../assets/mac/maximize_icon.svg";
-import macCloseIcon from "../assets/mac/close_icon.svg";
-import linuxMinimizeIcon from "../assets/linux/minimize_icon.svg";
-import linuxMaximizeIcon from "../assets/linux/maximize_icon.svg";
-import linuxCloseIcon from "../assets/linux/close_icon.svg";
+import WinBox from "~/static/winbox/js/winbox";
 
 export default {
   data() {
     return {
       typedCmd: "",
       asciiArtLogo:
-        "                      __\n"
-        + "                     / _)\n"
-        + "            _.----._/ /\n"
-        + "           /         /\n"
-        + "        __/ (  | (  |\n"
-        + "       /__.-'|_|--|_|\n"
-        + " _  __ __    __               \n"
-        + "|_|/  |_    /   _  _| o  _  _ \n"
-        + "| |\\__|__   \\__(_)(_| | | |(_|\n"
-        + "                           __|\n"
-        + "    Learn. Code. Compete.",
+        "                      __\n" +
+        "                     / _)\n" +
+        "            _.----._/ /\n" +
+        "           /         /\n" +
+        "        __/ (  | (  |\n" +
+        "       /__.-'|_|--|_|\n" +
+        " _  __ __    __               \n" +
+        "|_|/  |_    /   _  _| o  _  _ \n" +
+        "| |\\__|__   \\__(_)(_| | | |(_|\n" +
+        "                           __|\n" +
+        "    Learn. Code. Compete.",
       showLogo: false,
     };
   },
-  props: {
-    runViewCmd: {
-      type: Boolean,
-      default: false,
-    },
-  },
   computed: {
+    containerWidth() {
+      return document.getElementById("terminal-container").clientWidth;
+    },
+    containerHeight() {
+      return document.getElementById("terminal-container").clientHeight;
+    },
     osInfo() {
       let userNavigator;
       if (process.browser) {
@@ -100,68 +80,55 @@ export default {
       } else {
         return {};
       }
-      if (userNavigator.userAgent.indexOf("Win") !== -1) {
+      if (userNavigator.userAgent.includes("Win")) {
         return {
           os: "windows",
-          terminalTitle: "Command Prompt",
-          terminalPrefix: [{
-            spanClass: undefined,
-            spanText: "C:\\Users\\rexy>",
-          }],
           viewCmd: "type ace_coding.txt",
-          windowOptions: {
-            minimize: windowsMinimizeIcon,
-            maximize: windowsMaximizeIcon,
-            close: windowsCloseIcon,
-          },
-          windowIcon: windowsTerminalIcon,
-          headerHeight: "max(4vmin, 25px)",
         };
       }
-      if (userNavigator.userAgent.indexOf("Mac") !== -1
-        || userNavigator.userAgent.indexOf("like Mac") !== -1) {
+      if (userNavigator.userAgent.includes("Mac")) {
         return {
           os: "mac",
-          terminalTitle: "rexy —— -bash",
-          terminalPrefix: [{
-            spanClass: undefined,
-            spanText: "Rexy-Desktop:~ rexy$",
-          }],
           viewCmd: "cat ace_coding.txt",
-          windowOptions: {
-            close: macCloseIcon,
-            minimize: macMinimizeIcon,
-            maximize: macMaximizeIcon,
-          },
-          windowIcon: macTerminalIcon,
-          headerHeight: "max(4vmin, 25px)",
         };
       }
       return {
         os: "linux",
-        terminalTitle: "rexy@rexy-desktop: ~",
-        terminalPrefix: [{
-          spanClass: "green",
-          spanText: "rexy@rexy-desktop",
-        }, {
-          spanClass: undefined,
-          spanText: ":",
-        }, {
-          spanClass: "blue",
-          spanText: "~",
-        }, {
-          spanClass: undefined,
-          spanText: "$",
-        }],
         viewCmd: "cat ace_coding.txt",
-        windowOptions: {
-          minimize: linuxMinimizeIcon,
-          maximize: linuxMaximizeIcon,
-          close: linuxCloseIcon,
-        },
-        headerHeight: "max(4.5vmin, 25px)",
       };
     },
+  },
+  mounted() {
+    let terminalWidth, terminalHeight;
+    if (this.containerWidth < 640) {
+      terminalWidth = Math.min(1000, this.containerWidth * 0.80);
+      terminalHeight = terminalWidth * 1.25;
+    } else {
+      terminalWidth = Math.min(1000, this.containerWidth * 0.55);
+      terminalHeight = terminalWidth * 0.6;
+    }
+    WinBox({
+      class: [this.osInfo.os, "no-full"],
+      x: "center",
+      y: "center",
+      width: terminalWidth,
+      height: terminalHeight,
+      root: document.getElementById("terminal-container"),
+      mount: document.getElementById("terminal-content"),
+      onclose(force) {
+        alert("Rexy is currently admiring his terminal, and would prefer if you did not close it.");
+        return true;
+      },
+    });
+    let cursorOpacity = 0;
+    setInterval(() => {
+      document.getElementById("cursor").style.opacity = cursorOpacity;
+      cursorOpacity++;
+      cursorOpacity %= 2;
+    }, 700);
+    setTimeout(() => {
+      this.showAsciiArt();
+    }, 1250);
   },
   methods: {
     showAsciiArt() {
@@ -171,7 +138,7 @@ export default {
         const letterToType = lettersToType[i];
         setTimeout(() => {
           this.typedCmd += letterToType;
-          document.querySelector(".cursor").style.opacity = 1;
+          document.getElementById("cursor").style.opacity = 1;
         }, queueTime);
         queueTime += (2000 / lettersToType.length);
       }
@@ -182,275 +149,215 @@ export default {
       }, queueTime);
     },
   },
-  mounted() {
-    /* Blink Cursor */
-    let shouldBlink = 0;
-    setInterval(() => {
-      if (shouldBlink % 2 === 0) {
-        document.querySelector(".cursor").style.opacity = 1;
-      } else {
-        document.querySelector(".cursor").style.opacity = 0;
-      }
-      shouldBlink++;
-    }, 1000);
-  },
-  watch: {
-    runViewCmd(newVal, oldVal) {
-      if (oldVal === true) {
-        return;
-      }
-      if (newVal === true) {
-        this.showAsciiArt();
-      }
-    },
-  },
 };
 </script>
 
 <style>
-/* Span Styles */
-span.green {
-  color: #8AE234;
-}
-span.blue {
-  color: #729FCF;
-}
-
-/* General Terminal Styles */
-.terminal {
-  display: flex;
-  flex-direction: column;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
+/* Linux Terminal */
+.winbox.linux {
+  position: static;
   user-select: none;
-}
-.terminal p {
-  margin: 0;
-}
-.window-header {
-  height: var(--terminal-header-height);
   background: linear-gradient(
-    #2C3133,
-    #2C3133 90%,
-    #262A2C
+    #59574E 0px,
+    #3D3C37 30px
   );
+  border-radius: 5px 5px 0 0;
+  box-shadow: 0px 0px 15px #00000060;
+  min-height: 30px;
+  min-width: 300px;
 }
-.window-info {
-  display: flex;
-  align-items: center;
-  padding-left: calc(4 / 15 * var(--terminal-header-height));
+.winbox.linux .wb-body {
+  top: 30px;
+  background: #161619;
 }
-.window-title {
-  padding-left: calc(1 / 6 * var(--terminal-header-height));
-  color: #EEEAC9;
+.winbox.linux .wb-header {
+  position: relative;
+}
+.winbox.linux .wb-header,
+.winbox.linux .wb-header * {
+  height: 30px;
+}
+.winbox.linux .wb-title {
+  z-index: 9;
   font-family: "Ubuntu", sans-serif;
-}
-.window-content {
-  background: #232729;
-  color: #EEEEEC;
-  font-size: calc(8 / 15 * var(--terminal-header-height));
-  font-family: "Ubuntu Mono", monospace;
-  flex-grow: 1;
-  overflow: hidden;
-}
-.ascii-art-logo {
-  white-space: pre;
+  color: #EEEAC9;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 30px;
+  position: absolute;
   width: 100%;
-  height: calc(100% - var(--terminal-header-height));
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.window-options {
-  height: 100%;
-  display: flex;
+.winbox.linux .wb-title::after {
+  content: "rexy@rexy-desktop: ~";
 }
-.cmd-prompt {
-  padding: calc(1 / 4 * var(--terminal-header-height));
+.winbox.linux .wb-icon {
+  z-index: 10;
+  position: absolute;
+  right: 4px;
+}
+.winbox.linux .wb-icon > * {
+  width: 20px;
+  background-position: 50% 50%;
+  background-size: 18px;
+}
+.winbox.linux .wb-icon > *:hover {
+  cursor: default;
+}
+.winbox.linux .wb-min {
+  background-image: url("../assets/images/terminal/linux/normal/min_icon.png");
+}
+.winbox.linux .wb-min:hover {
+  background-image: url("../assets/images/terminal/linux/hover/min_icon.png");
+}
+.winbox.linux .wb-max {
+  background-image: url("../assets/images/terminal/linux/normal/max_icon.png");
+}
+.winbox.linux .wb-max:hover {
+  background-image: url("../assets/images/terminal/linux/hover/max_icon.png");
+}
+.winbox.linux .wb-close {
+  background-image: url("../assets/images/terminal/linux/normal/close_icon.png");
+}
+.winbox.linux .wb-close:hover {
+  background-image: url("../assets/images/terminal/linux/hover/close_icon.png");
 }
 
-/* Windows Styles */
-.windows.terminal
-.window-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+/* Windows Terminal */
+.winbox.windows {
+  position: static;
+  user-select: none;
   background: #000000;
+  box-shadow: 0px 0px 15px #00000060;
+  border: 1px solid #2B2D2F;
+  min-height: 30px;
+  min-width: 300px;
 }
-.windows.terminal
-.window-title {
-  color: #FFFFFF;
-  font-family: 'Segoe UI', sans-serif;
-  font-size: calc(0.4 * var(--terminal-header-height));
-}
-.windows.terminal
-.window-options > div {
-  width: calc(1.5 * var(--terminal-header-height));
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.windows.terminal
-.window-options > div:hover {
-  background: #1A1A1A;
-}
-.windows.terminal
-.window-options > .close:hover {
-  background: #E81123;
-}
-.windows.terminal
-.window-options > div > img {
-  width: calc(1 / 3 * var(--terminal-header-height))
-}
-.windows.terminal
-.window-content {
+.winbox.windows .wb-body {
+  top: 30px;
   background: #0C0C0C;
-  color: #F3F3F3;
-  font-family: Consolas, 'Courier New', Courier, monospace;
 }
-.windows.terminal
-.window-icon {
-  width: calc( 8 / 15 * var(--terminal-header-height));
+.winbox.windows .wb-header,
+.winbox.windows .wb-header * {
+  height: 30px;
 }
-.windows.terminal
-.cursor {
+.winbox.windows .wb-title {
   position: relative;
-  bottom: calc(2 / 15 * var(--terminal-header-height));
-  border-bottom: calc(2 / 15 * var(--terminal-header-height)) solid white;
+  padding-left: 29px;
+  align-items: center;
+  font-family: "Segoe UI", sans-serif;
+  font-size: 12px;
+  line-height: 30px;
+}
+.winbox.windows .wb-title::before {
+  content: "";
+  position: absolute;
+  top: 0; bottom: 0; left: 8px;
+  width: 16px; height: 16px;
+  margin: auto;
+  background-image: url("../assets/images/terminal/windows/terminal_icon.png");
+  background-size: 16px 16px;
+}
+.winbox.windows .wb-title::after {
+  content: "Command Prompt";
+}
+.winbox.windows .wb-icon > * {
+  width: 45px;
+  background-position: 50% 50%;
+  background-size: 10px;
+}
+.winbox.windows .wb-icon > *:hover {
+  cursor: default;
+}
+.winbox.windows .wb-min {
+  background-image: url("../assets/images/terminal/windows/min_icon.svg");
+}
+.winbox.windows .wb-max {
+  background-image: url("../assets/images/terminal/windows/max_icon.svg");
+}
+.winbox.windows .wb-close {
+  background-image: url("../assets/images/terminal/windows/close_icon.svg");
+}
+.winbox.windows .wb-min:hover,
+.winbox.windows .wb-max:hover {
+  background-color: #1A1A1A;
+}
+.winbox.windows .wb-close:hover {
+  background-color: #D30F20;
 }
 
-/* Mac Styles */
-.mac.terminal
-.window-header {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+/* Mac Terminal */
+.winbox.mac {
+  position: static;
+  user-select: none;
   background: linear-gradient(
-    #525252,
-    #484848 100%
+    #525252 0px,
+    #484848 30px
   );
-  border-radius:
-    max(calc(5/23 * var(--terminal-header-height)), 5px)
-    max(calc(5/23 * var(--terminal-header-height)), 5px)
-    0
-    0;
+  border-radius: 5px 5px 0 0;
+  box-shadow: 0px 0px 15px #00000060;
+  min-height: 30px;
+  min-width: 300px;
 }
-.mac.terminal
-.window-title {
-  color: #C4C4C4;
+.winbox.mac .wb-body {
+  top: 30px;
+  background: #161619;
+}
+.winbox.mac .wb-header {
+  position: relative;
+}
+.winbox.mac .wb-header,
+.winbox.mac .wb-header * {
+  height: 30px;
+}
+.winbox.mac .wb-title {
+  z-index: 9;
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-  font-size: calc(12/23 * var(--terminal-header-height));
-}
-.mac.terminal
-.window-options {
+  color: #C4C4C4;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 30px;
   position: absolute;
-  left: 0;
-  padding-left: max(calc(8/23 * var(--terminal-header-height)), 8px);
-  width: max(calc(52/23 * var(--terminal-header-height)), 52px);
-  display: flex;
-  justify-content: space-between;
-}
-.mac.terminal
-.window-options > div {
-  height: 100%;
-  display: flex;
-  align-items: center;
-}
-.mac.terminal
-.window-options > div > img {
-  width: calc(12 / 23 * var(--terminal-header-height))
-}
-.mac.terminal
-.window-content {
-  background: #1E1E1E;
-  color: #FAFAFA;
-  font-family: Menlo, Consolas, 'Courier New', Courier, monospace;
-  border-radius:
-    0
-    0
-    max(calc(5/23 * var(--terminal-header-height)), 5px)
-    max(calc(5/23 * var(--terminal-header-height)), 5px);
-}
-.mac.terminal
-.window-icon {
-  width: calc( 14 / 23 * var(--terminal-header-height));
-}
-.mac.terminal
-.type-cmd {
-  margin-left: max(calc(5/23 * var(--terminal-header-height)), 5px);
-}
-.mac.terminal
-.cursor {
-  background: #9C9C9C;
-}
-
-/* Linux */
-.linux.terminal
-.window-header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  background: linear-gradient(
-    #2C3133,
-    #2C3133 90%,
-    #262A2C
-  );
-  border-radius:
-    max(calc(5/23 * var(--terminal-header-height)), 5px)
-    max(calc(5/23 * var(--terminal-header-height)), 5px)
-    0
-    0;
-}
-.linux.terminal
-.window-title {
-  color: #FFFFFF;
-}
-.linux.terminal
-.window-options {
-  position: absolute;
-  right: 0;
-}
-.linux.terminal
-.window-options > div {
-  width: calc(1 * var(--terminal-header-height));
-  height: 100%;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.linux.terminal
-.window-options > div > img {
-  width: calc(1 / 3 * var(--terminal-header-height))
+.winbox.mac .wb-title::after {
+  content: "rexy —— -bash";
 }
-.linux.terminal
-.window-options .minimize > img {
-  width: max(calc(8 / 36 * var(--terminal-header-height)), 8px)
+.winbox.mac .wb-icon {
+  z-index: 10;
+  position: absolute;
+  left: 4px;
 }
-.linux.terminal
-.window-options .maximize > img {
-  width: max(calc(8 / 36 * var(--terminal-header-height)), 8px)
+.winbox.mac .wb-icon > * {
+  width: 25px;
+  background-position: 50% 50%;
+  background-size: 16px;
 }
-.linux.terminal
-.window-options .close > img {
-  width: max(calc(6 / 36 * var(--terminal-header-height)), 6px)
+.winbox.mac .wb-icon > *:hover {
+  cursor: default;
 }
-.linux.terminal
-.window-content {
-  background: #232729;
-  color: #EEEEEC;
+.winbox.mac .wb-min {
+  background-image: url("../assets/images/terminal/mac/normal/min_icon.png");
 }
-.linux.terminal
-.type-cmd {
-  margin-left: max(calc(5/23 * var(--terminal-header-height)), 5px);
+.winbox.mac .wb-min:hover {
+  background-image: url("../assets/images/terminal/mac/hover/min_icon.png");
 }
-.linux.terminal
-.cursor {
-  background: #EEEEEC;
+.winbox.mac .wb-max {
+  background-image: url("../assets/images/terminal/mac/normal/max_icon.png");
+}
+.winbox.mac .wb-max:hover {
+  background-image: url("../assets/images/terminal/mac/hover/max_icon.png");
+}
+.winbox.mac .wb-close {
+  float: left;
+  background-image: url("../assets/images/terminal/mac/normal/close_icon.png");
+}
+.winbox.mac .wb-close:hover {
+  background-image: url("../assets/images/terminal/mac/hover/close_icon.png");
 }
 </style>
