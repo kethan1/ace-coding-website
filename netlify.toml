@@ -1,0 +1,41 @@
+[[redirects]]
+  from = "https://dinohacks.acecoding.org/*"
+  to = "https://dino-hacks.devpost.com"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://discord.acecoding.org/*"
+  to = "https://acecoding.slack.com/join/shared_invite/zt-gxrkmg1c-GNKWj0Zvc67snlA66NtgmQ"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://hpms.acecoding.org/"
+  to = "https://forms.gle/GhXYNu4qFL5AVuaz811"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://pms.acecoding.org/"
+  to = "https://forms.gle/aPux1J8iHUtirP5y7"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://hms.acecoding.org/"
+  to = "https://forms.gle/fYG7eSdeG5FndXF4A"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://docs.acecoding.org/*"
+  to = "https://acecoding.herokuapp.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://join.acecoding.org/*"
+  to = "https://forms.gle/EtmyVUZmMHC2Zao59"
+  status = 301
+  force = true
