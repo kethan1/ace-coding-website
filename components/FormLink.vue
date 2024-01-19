@@ -3,7 +3,7 @@
     <span>
       <slot />
     </span>
-    <ExternalLinkIcon class="text-white group-hover:text-teal-200" />
+    <IconExternalLink class="text-white group-hover:text-teal-200" />
   </a>
 </template>
 
