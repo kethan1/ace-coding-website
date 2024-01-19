@@ -78,7 +78,7 @@ export default {
             title: "PMS Branch Director",
           },
           {
-            image: "profile-photos/arnav-dhole.webp",
+            image: "profile-photos/arnav-dhole.png",
             name: "Arnav Dhole",
             title: "HMS Branch Director",
           },
