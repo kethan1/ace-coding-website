@@ -15,11 +15,11 @@
         </h2>
         <div class="[&>*]:inline-flex [&>*]:items-center [&>*]:space-x-1 space-x-3">
           <div>
-            <ClockIcon size="16" />
+            <IconClock class="w-4 h-4" />
             <p>{{ timeRange }}</p>
           </div>
           <div v-if="location">
-            <MapPinIcon size="16" />
+            <IconMapPin class="w-4 h-4" />
             <h3>{{ location }}</h3>
           </div>
         </div>
@@ -29,13 +29,13 @@
       </p>
       <div>
         <a :href="calendarLink" target="_blank" class="inline-flex items-center space-x-1.5 px-2.5 py-1 bg-slate-800 border-slate-700 border rounded hover:bg-slate-900/25 hover:text-white">
-          <CalendarPlusIcon size="18" />
+          <IconCalendar class="w-4 h-4" />
           <span>
             Add to Calendar
           </span>
         </a>
         <a v-if="signUp" :href="signUp" target="_blank" class="inline-flex items-center space-x-1.5 px-2.5 py-1 bg-slate-800 border-slate-700 border rounded hover:bg-slate-900/25 hover:text-white">
-          <ClipboardListIcon size="18" />
+          <IconClipboard class="w-4 h-4" />
           <span>
             Sign Up
           </span>

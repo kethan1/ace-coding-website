@@ -10534,11 +10534,6 @@ vue-style-loader@^4.1.0, vue-style-loader@^4.1.3:
     hash-sum "^1.0.2"
     loader-utils "^1.0.2"
 
-vue-tabler-icons@1.0:
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/vue-tabler-icons/-/vue-tabler-icons-1.0.3.tgz#93d878dc8e7241421579e4f9083eeb4999eeff0d"
-  integrity sha512-qHDhkZxB4RCIef/D1cNQKDnQGouz5fwYy1nY3MDuzHgtU8QJ9vPh31feWuBbq51s369Ba+AnO5KWKGPWLaq2Zg==
-
 vue-template-compiler@^2.6.14, vue-template-compiler@^2.7.16:
   version "2.7.16"
   resolved "https://registry.yarnpkg.com/vue-template-compiler/-/vue-template-compiler-2.7.16.tgz#c81b2d47753264c77ac03b9966a46637482bb03b"

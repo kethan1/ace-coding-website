@@ -35,10 +35,7 @@ export default {
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
-  components: [
-    "~/components",
-    { path: "node_modules/vue-tabler-icons/icons/", pattern: "(ExternalLinkIcon|ClockIcon|MapPinIcon|ClipboardListIcon|CalendarPlusIcon).js" },
-  ],
+  components: true,
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
