@@ -1,40 +1,60 @@
 <template>
-  <div>
-    <div class="nav-bar">
-      <div class="nav-content">
-        <a
-          href="#home"
-          class="logo"
-        >
-          <img
-            style="height:100%;"
-            src="../assets/ACE_Logo.png"
-            alt="ACE"
-          >
+  <div class="w-full h-14 px-3 fixed top-0 z-50 bg-[#164d46] shadow">
+    <div class="max-w-[65ch] lg:max-w-[80ch] xl:max-w-[100ch] mx-auto h-full flex items-center justify-between">
+      <div>
+        <a class="px-2 py-1 rounded transition-shadow text-white text-2xl font-semibold hover:shadow-[0px_0px_15px_rgba(0,0,0,0.25)]" href="#home">
+          ACE <code class="bg-[#27c940]/20 border border-[#27c940]/40 rounded px-1 font-normal">Coding</code>
         </a>
-        <div class="nav-links">
-          <a
-            v-for="(page, index) in pages"
-            :key="index"
-            :href="page.pageLink"
-          >{{ page.pageName }}</a>
-          <div
-            class="menu-btn"
-            @click="toggleMobileMenu"
-          >
-            <div class="bar-1" />
-            <div class="bar-2" />
-            <div class="bar-3" />
-          </div>
+      </div>
+      <button class="md:hidden text-white">
+        <svg
+          v-if="!showMenu"
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-6 w-6"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          stroke-width="2"
+          @click="showMenu = true"
+        >
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+        <svg
+          v-else
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-6 w-6"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          stroke-width="2"
+          @click="showMenu = false"
+        >
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+      <div class="hidden md:inline-flex items-center space-x-2">
+        <div
+          v-for="(link, index) in links"
+          :key="`link-${index}`"
+        >
+          <a class="p-2 rounded transition-shadow hover:shadow-[0px_0px_15px_rgba(0,0,0,0.25)] text-white text-lg font-semibold" :href="link.href">
+            {{ link.title }}
+          </a>
         </div>
       </div>
-      <div class="mobile-menu">
-        <a
-          v-for="(page, index) in pages"
-          :key="index"
-          :href="page.pageLink"
-        >{{ page.pageName }}</a>
-      </div>
+    </div>
+    <div
+      v-if="showMenu"
+      class="absolute md:hidden w-full left-0 top-full flex flex-col items-center bg-[#1d5f57] divide-y"
+    >
+      <a
+        v-for="(link, index) in links"
+        :key="`link-${index}`"
+        :href="link.href"
+        class="py-1 w-full text-center transition-shadow hover:shadow-[0px_0px_15px_rgba(0,0,0,0.25)] text-white text-lg font-semibold border-[#257970]"
+      >
+        {{ link.title }}
+      </a>
     </div>
   </div>
 </template>
@@ -43,184 +63,29 @@
 export default {
   data() {
     return {
-      pages: [
+      showMenu: false,
+      links: [
         {
-          pageName: "Home",
-          pageLink: "#home",
+          title: "About",
+          href: "#about",
         },
         {
-          pageName: "About",
-          pageLink: "#about",
+          title: "Join",
+          href: "#join",
         },
         {
-          pageName: "Join",
-          pageLink: "#join",
+          title: "Calendar",
+          href: "#calendar",
         },
         {
-          pageName: "Calendar",
-          pageLink: "#calendar",
-        },
-        // {
-        //   pageName: "Locations",
-        //   pageLink: "#locations",
-        // },
-        {
-          pageName: "Team",
-          pageLink: "#team",
-        },
-        {
-          pageName: "Contact",
-          pageLink: "#contact",
+          title: "Team",
+          href: "#team",
         },
       ],
     };
-  },
-  methods: {
-    toggleMobileMenu() {
-      document.querySelector(".menu-btn").classList.toggle("close-menu-btn");
-      document.querySelector(".mobile-menu").classList.toggle("mobile-menu-show");
-    },
   },
 };
 </script>
 
 <style>
-@media only screen and (min-width: 1024px) {
-  .nav-links a {
-    display: inline-flex !important;
-  }
-  .menu-btn {
-    display: none !important;
-  }
-  .mobile-menu {
-    display: none !important;
-  }
-}
-@media only screen and (max-width: 1023px) {
-  .nav-links a {
-    display: none !important;
-  }
-  .menu-btn {
-    display: inline-flex !important;
-  }
-  .mobile-menu {
-    display: flex !important;
-  }
-}
-
-.nav-bar {
-  --nav-bar-height: 60px;
-  --nav-bar-font-size: 20px;
-  z-index: 1000000;
-  position: fixed;
-  width: 100vw;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.nav-content {
-  z-index: 1000001;
-  width: 95vw;
-  padding: 0 2.5vw;
-  background-color: #90E4A3CC;
-  box-shadow: 0px 0px 6px #000000AA;
-  height: var(--nav-bar-height);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.nav-links {
-  display: flex;
-  align-items: center;
-}
-.logo {
-  height: 70%;
-}
-.nav-links a,
-.mobile-menu a {
-  text-decoration: none;
-  font-family: Poppins;
-  font-weight: bold;
-  font-size: var(--nav-bar-font-size);
-  color: black;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  min-height: calc(var(--nav-bar-height) * 0.75);
-  border-radius: 5px;
-  box-shadow: 0;
-  transition:
-    box-shadow 0.2s,
-    color 0.2s,
-    background-color 0.2s;
-}
-.nav-links a {
-  min-width: calc(var(--nav-bar-height) + 15px);
-  padding: 0 10px;
-  margin: 0 2px;
-}
-.mobile-menu a {
-  width: 100%;
-}
-.nav-links a:hover,
-.mobile-menu a:hover {
-  box-shadow: 0px 0px 4px #44694daa;
-  background-color: #00000008;
-  color: #0f6886;
-}
-.mobile-menu {
-  width: 100%;
-  max-height: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background: #7ab88aDD;
-  overflow: hidden;
-  transition: max-height 0.3s;
-}
-.mobile-menu-show {
-  max-height: 100vh;
-}
-.menu-btn {
-  padding: 0 10px;
-  display: inline-flex;
-  width: calc(var(--nav-bar-height) * 0.3);
-  height: calc(var(--nav-bar-height) * 0.3);
-  flex-direction: column;
-  justify-content: space-between;
-}
-.menu-btn:hover {
-  cursor: pointer;
-}
-.menu-btn:hover div {
-  width: 100%;
-}
-.bar-1,
-.bar-2,
-.bar-3 {
-  background: black;
-  height: 20%;
-  border-radius: 40px;
-  transition: width 0.2s, transform 0.2s, opacity 0.2s;
-}
-.bar-1 {
-  width: 100%;
-}
-.bar-2 {
-  width: 70%;
-}
-.bar-3 {
-  width: 40%;
-}
-.close-menu-btn .bar-1 {
-  width: 100%;
-  transform: translateY(200%) rotate(45deg);
-}
-.close-menu-btn .bar-2 {
-  opacity: 0;
-}
-.close-menu-btn .bar-3 {
-  width: 100%;
-  transform: translateY(-200%) rotate(-45deg);
-}
 </style>
