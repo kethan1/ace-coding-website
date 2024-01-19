@@ -6,13 +6,13 @@
 
 [[redirects]]
   from = "https://discord.acecoding.org/*"
-  to = "https://acecoding.slack.com/join/shared_invite/zt-gxrkmg1c-GNKWj0Zvc67snlA66NtgmQ"
+  to = "https://discord.com/invite/JXPVNxBEnS"
   status = 301
   force = true
 
 [[redirects]]
   from = "https://hpms.acecoding.org/"
-  to = "https://forms.gle/GhXYNu4qFL5AVuaz811"
+  to = "https://forms.gle/GhXYNu4qFL5AVuaz8"
   status = 301
   force = true
 
