@@ -11,6 +11,12 @@
   force = true
 
 [[redirects]]
+  from = "https://teach.acecoding.org/*"
+  to = "https://forms.gle/NRNJpJjztaA6MjJj8"
+  status = 301
+  force = true
+
+[[redirects]]
   from = "https://hpms.acecoding.org/"
   to = "https://forms.gle/GhXYNu4qFL5AVuaz8"
   status = 301
