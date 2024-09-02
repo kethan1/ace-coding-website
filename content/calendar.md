@@ -7,7 +7,7 @@ title: "Calendar"
 
 <div class="space-y-2">
 
-<CalendarEvent month="Sep" day="11" time-range="3:40 PM - 4:40 PM" calendar-dates="20240130T234000Z%2F20240130T244000Z" title="PMS - First Meeting of the Year!" location="Room 406" sign-up="https://pms.acecoding.org">
+<CalendarEvent month="Sep" day="11" time-range="3:30 PM - 4:15 PM" calendar-dates="20240130T234000Z%2F20240130T244000Z" title="Intro Meeting!" location="Library Lab" sign-up="https://pms.acecoding.org">
 
 The first ever ACE Coding intro meeting at Amador Valley High School for the 2024-2025 school year.
 
