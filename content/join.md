@@ -1,5 +1,5 @@
 ---
-title: "Join"
+title: "Sign Up"
 ---
 
 <h1 class="text-outline-shadow before:content-['Join']">Join</h1>
