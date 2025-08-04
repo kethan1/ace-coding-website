@@ -17,6 +17,16 @@ export default {
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { hid: "description", name: "description", content: "" },
       { name: "format-detection", content: "telephone=no" },
+
+      // Open Graph Tags (https://ogp.me)
+      // Used by sites like Discord
+      { property: "og:title", content: "ACE Coding" },
+      {
+        property: "og:description",
+        content: "We are a group of high school students dedicated to spreading the knowledge of programming to people of all ages. Since its inaugural four student class, ACE Coding has expanded to each of the local middle schools and has now reached hundreds of students in our community through its weekly lessons.",
+      },
+      { property: "og:type", content: "website" },
+      { property: "og:url", content: "https://acecoding.org" },
     ],
     link: [
       { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
