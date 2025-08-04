@@ -7,7 +7,7 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: "ACE Code Day",
+    title: "ACE Coding",
     htmlAttrs: {
       lang: "en",
       class: "scroll-smooth",
