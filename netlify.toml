@@ -18,19 +18,19 @@
 
 [[redirects]]
   from = "https://hpms.acecoding.org/"
-  to = "https://forms.gle/afvec9vwVM5nhKx87"
+  to = "https://forms.gle/KtRHZJapg1qLUM9J6"
   status = 301
   force = true
 
 [[redirects]]
   from = "https://pms.acecoding.org/"
-  to = "https://forms.gle/aPux1J8iHUtirP5y7"
+  to = "https://docs.google.com/forms/d/1S8gj_t3-R6itIoSlbeu4l_Q_KXocYeJhpNpN7poN8_Q/edit"
   status = 301
   force = true
 
 [[redirects]]
   from = "https://hms.acecoding.org/"
-  to = "https://forms.gle/VDwcgdUcSJXF7mqz6"
+  to = "https://forms.gle/aizXrpUkYbdHjBty5"
   status = 301
   force = true
 

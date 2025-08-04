@@ -1,8 +1,8 @@
 ---
-title: "Join"
+title: "Sign Up"
 ---
 
-<h1 class="text-outline-shadow before:content-['Join']">Join</h1>
+<h1 class="text-outline-shadow before:content-['Sign Up']">Join</h1>
 
 Fill out the appropriate form below to register as a student. To be informed of all the things happening throughout our club, join our [Discord](https://discord.acecoding.org).
 
