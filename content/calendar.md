@@ -25,7 +25,7 @@ The first ever ACE Coding meeting at Hart Middle School for the fall semester of
 
 </CalendarEvent>
 
-<CalendarEvent month="TBD" day="TBD" time-range="3:40-4:40 pm" calendar-dates="20240130T234000Z%2F20240130T244000Z" title="PMS - First Meeting of the Year!" location="Room 406" sign-up="https://pms.acecoding.org">
+<CalendarEvent month="Sep" day="30" time-range="3:15-4:15 pm" calendar-dates="20240130T234000Z%2F20240130T244000Z" title="PMS - First Meeting of the Year!" location="Room 406" sign-up="https://pms.acecoding.org">
 
 The first ever ACE Coding meeting at Pleasanton Middle School for the fall semester of the 2025-2026 school year.
 
