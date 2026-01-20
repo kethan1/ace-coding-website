@@ -19,7 +19,7 @@ The first ever ACE Coding meeting at Harvest Park Middle School for the fall sem
 
 </CalendarEvent>
 
-<CalendarEvent month="Jan" day="27" time-range="3:40-4:40 pm" calendar-dates="20260127T234500Z%2F20251007T244500Z" title="HMS - First Meeting of the Year!" location="Room C-114" sign-up="https://hms.acecoding.org">
+<CalendarEvent month="Jan" day="27" time-range="3:40-4:40 pm" calendar-dates="20260127T234500Z%2F20251007T244500Z" title="HMS - First Meeting of the Year!" location="Room TBD" sign-up="https://hms.acecoding.org">
 
 The first ever ACE Coding meeting at Hart Middle School for the fall semester of the 2025-2026 school year.
 
