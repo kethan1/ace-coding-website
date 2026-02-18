@@ -14,6 +14,9 @@
     <div id="team" class="bg-gradient-to-br from-[#16474d] to-[#22213f] px-6 py-8 sm:py-14 scroll-mt-14">
       <nuxt-content class="lg:max-w-[80ch] xl:max-w-[100ch] mx-auto prose prose-sm sm:prose-base prose-invert" :document="team" />
     </div>
+    <div id="contact" class="bg-slate-900 px-6 py-8 sm:py-14 scroll-mt-14">
+      <nuxt-content class="lg:max-w-[80ch] xl:max-w-[100ch] mx-auto prose prose-sm sm:prose-base prose-invert" :document="contact" />
+    </div>
   </div>
 </template>
 
@@ -24,11 +27,13 @@ export default {
     const join = await $content("join").fetch();
     const calendar = await $content("calendar").fetch();
     const team = await $content("team").fetch();
+    const contact = await $content("contact").fetch();
     return {
       about,
       join,
       calendar,
       team,
+      contact,
     };
   },
 };

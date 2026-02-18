@@ -81,6 +81,10 @@ export default {
           title: "Team",
           href: "#team",
         },
+        {
+          title: "Contact",
+          href: "#contact",
+        },
       ],
     };
   },
