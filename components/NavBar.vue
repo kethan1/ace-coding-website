@@ -82,6 +82,10 @@ export default {
           href: "#team",
         },
         {
+          title: "Sponsors",
+          href: "#sponsors",
+        },
+        {
           title: "Contact",
           href: "#contact",
         },
