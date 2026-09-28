@@ -11,12 +11,12 @@ title: "Team"
          gap-3"
 >
 
-<TeamMember name="Gaurav Gupta" title="Co-President" src="images/team/gaurav-gupta.jpg"></TeamMember>
-<TeamMember name="Kethan Vegunta" title="Co-President" src="images/team/kethan-vegunta.jpg"></TeamMember>
-<TeamMember name="Raymond Hoang" title="Secretary/Treasurer" src="images/team/raymond-hoang.jpg"></TeamMember>
-<TeamMember name="Sammie Zhang" title="HPMS Branch Director" src="images/team/sammie-zheng.jpg"></TeamMember>
-<TeamMember name="Dishant Bhandula" title="PMS Branch Director" src="images/team/dishant-bhandula.jpg"></TeamMember>
-<TeamMember name="James Moon" title="HMS Branch Director" src="images/team/anonymous-profile.png"></TeamMember>
-<TeamMember name="Atharv Upadhyay" title="Curriculum Director" src="images/team/anonymous-profile.png"></TeamMember>
+<TeamMember name="Kethan Vegunta" title="Co-President" src="images/team/kethan-vegunta.avif"></TeamMember>
+<TeamMember name="Dishant Bhandula" title="Co-President" src="images/team/dishant-bhandula.avif"></TeamMember>
+<TeamMember name="Raymond Hoang" title="Secretary/Treasurer" src="images/team/raymond-hoang.avif"></TeamMember>
+<TeamMember name="Jyoshika Mukundhu" title="HPMS Branch Director" src="images/team/anonymous-profile.avif"></TeamMember>
+<TeamMember name="Deron Fan" title="PMS Branch Director" src="images/team/anonymous-profile.avif"></TeamMember>
+<TeamMember name="Krithave Vijaya Anand" title="HMS Branch Director" src="images/team/anonymous-profile.avif"></TeamMember>
+<TeamMember name="Smayan Vinay" title="Curriculum Director" src="images/team/anonymous-profile.avif"></TeamMember>
 
 </div>
