@@ -41,6 +41,20 @@ export default {
       contact,
     };
   },
+  mounted() {
+    // The site is client-rendered (ssr: false), so sections don't exist yet when the
+    // browser tries to jump to the URL hash on load; scroll to it once they're rendered
+    const id = decodeURIComponent(window.location.hash.slice(1));
+    if (!id) {
+      return;
+    }
+    this.$nextTick(() => {
+      const section = document.getElementById(id);
+      if (section) {
+        section.scrollIntoView({ behavior: "instant", block: "start" });
+      }
+    });
+  },
 };
 </script>
 
